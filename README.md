@@ -5,7 +5,7 @@ This program was written in C++ as part of a Machines and Computability course a
 copy other reame file 
 fill in soon
 
-![alt text](https://raw.githubusercontent.com/arminnh/Basic-Graphics-Engine/master/images/spheres_and_cylinders/spheres_and_cylinders014.png)
+![alt text](doc/2015-10-05 20_27_12-eOS Freya 64 - VMware Player (Non-commercial use only).png)
 
 
 
