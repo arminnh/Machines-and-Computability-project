@@ -94,6 +94,6 @@ A brief explanation + example of the UTM's algorithm (in English) is available i
 
 ### Authors
 [Armin Halilovic](https://github.com/arminnh)  
-[Josse Coen] (https://github.com/jsscn)  
-[Bruno de Deken] (https://github.com/brunodd)  
-[Fouad Kichauat] (https://github.com/Fouad-Kichauat)  
+[Josse Coen](https://github.com/jsscn)  
+[Bruno de Deken](https://github.com/brunodd)  
+[Fouad Kichauat](https://github.com/Fouad-Kichauat)  
