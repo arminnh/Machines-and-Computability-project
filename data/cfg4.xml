@@ -1,0 +1,19 @@
+<CFG name="brackets">
+    <variables>
+        <v value="S"  />
+    </variables>
+    <terminals>
+        <t value="["  />
+        <t value="]"  />
+        <t value="("  />
+        <t value=")"  />
+    </terminals>
+    <productionrules>
+        <rule head="S" body="S S" />
+        <rule head="S" body="'[' ']'" />
+        <rule head="S" body="'(' ')'" />
+        <rule head="S" body="'[' S ']'" />
+        <rule head="S" body="'(' S ')'" />
+    </productionrules>
+    <startsymbol value="S"  />
+</CFG>

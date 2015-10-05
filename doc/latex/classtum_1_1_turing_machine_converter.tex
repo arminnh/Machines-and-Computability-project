@@ -1,0 +1,95 @@
+\hypertarget{classtum_1_1_turing_machine_converter}{\section{tum\-:\-:\-Turing\-Machine\-Converter \-Class \-Reference}
+\label{classtum_1_1_turing_machine_converter}\index{tum\-::\-Turing\-Machine\-Converter@{tum\-::\-Turing\-Machine\-Converter}}
+}
+
+
+\-Class for converting a given tape to an encoded tape.  
+
+
+
+
+{\ttfamily \#include $<$\-Turing\-Machine\-Encoding\-Converter.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtum_1_1_turing_machine_converter_a907cba55e98213f451c7b66a8d188c03}{\-Turing\-Machine\-Converter} (const \hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} \&tm)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classtum_1_1_tape}{\-Tape} $>$ \hyperlink{classtum_1_1_turing_machine_converter_a86d87e7429fdd61dcc067fb85d3e8822}{encode} (const \hyperlink{classtum_1_1_tape}{\-Tape} \&tape\-To\-Encode)
+\begin{DoxyCompactList}\small\item\em \-Encode the turingmachine and input from {\ttfamily tape\-To\-Encode}. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_tape}{\-Tape} \hyperlink{classtum_1_1_turing_machine_converter_af94296ffc5b19f21daa4f3505f2dec8b}{decode\-Simulated\-Tape} (const \hyperlink{classtum_1_1_tape}{\-Tape} \&tape\-To\-Decode) const 
+\begin{DoxyCompactList}\small\item\em \-Decode a tape (writte in binary notation) to it's original form. \end{DoxyCompactList}\item 
+\hypertarget{classtum_1_1_turing_machine_converter_a94c00350ec612eb57960241ce3ed3c60}{int {\bfseries decode\-Current\-State\-Tape} (const \hyperlink{classtum_1_1_tape}{\-Tape} \&tape\-To\-Decode) const }\label{classtum_1_1_turing_machine_converter_a94c00350ec612eb57960241ce3ed3c60}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class for converting a given tape to an encoded tape. 
+
+\-The original tape is the tape from an arbitrary \-Turing \-Machine. \-There are 4 encoded tapes\-: \hyperlink{classtum_1_1_tape}{\-Tape} 1\-: \-The simulation tape. \hyperlink{classtum_1_1_tape}{\-Tape} 2\-: \-The encodation of the original \-T\-M. \hyperlink{classtum_1_1_tape}{\-Tape} 3\-: \-The current state. \hyperlink{classtum_1_1_tape}{\-Tape} 4\-: \-The working tape (scrap tape). 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtum_1_1_turing_machine_converter_a907cba55e98213f451c7b66a8d188c03}{\index{tum\-::\-Turing\-Machine\-Converter@{tum\-::\-Turing\-Machine\-Converter}!\-Turing\-Machine\-Converter@{\-Turing\-Machine\-Converter}}
+\index{\-Turing\-Machine\-Converter@{\-Turing\-Machine\-Converter}!tum::TuringMachineConverter@{tum\-::\-Turing\-Machine\-Converter}}
+\subsubsection[{\-Turing\-Machine\-Converter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Turing\-Machine\-Converter\-::\-Turing\-Machine\-Converter} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Turing\-Machine} \&}]{tm}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_converter_a907cba55e98213f451c7b66a8d188c03}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tm} & \-The \-Turing \-Machine that will be converted. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtum_1_1_turing_machine_converter_af94296ffc5b19f21daa4f3505f2dec8b}{\index{tum\-::\-Turing\-Machine\-Converter@{tum\-::\-Turing\-Machine\-Converter}!decode\-Simulated\-Tape@{decode\-Simulated\-Tape}}
+\index{decode\-Simulated\-Tape@{decode\-Simulated\-Tape}!tum::TuringMachineConverter@{tum\-::\-Turing\-Machine\-Converter}}
+\subsubsection[{decode\-Simulated\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Tape} {\bf tum\-::\-Turing\-Machine\-Converter\-::decode\-Simulated\-Tape} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Tape} \&}]{tape\-To\-Decode}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_turing_machine_converter_af94296ffc5b19f21daa4f3505f2dec8b}
+
+
+\-Decode a tape (writte in binary notation) to it's original form. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-To\-Decode} & \-The encoded tape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The decoded tape. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_turing_machine_converter_a86d87e7429fdd61dcc067fb85d3e8822}{\index{tum\-::\-Turing\-Machine\-Converter@{tum\-::\-Turing\-Machine\-Converter}!encode@{encode}}
+\index{encode@{encode}!tum::TuringMachineConverter@{tum\-::\-Turing\-Machine\-Converter}}
+\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf \-Tape} $>$ {\bf tum\-::\-Turing\-Machine\-Converter\-::encode} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Tape} \&}]{tape\-To\-Encode}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_converter_a86d87e7429fdd61dcc067fb85d3e8822}
+
+
+\-Encode the turingmachine and input from {\ttfamily tape\-To\-Encode}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-To\-Encode} & \-The tape with input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-S\-T\-L \-Vector containing the 4 tapes for the \-U\-T\-M. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-Turing\-Machine\-Encoding\-Converter.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-Turing\-Machine\-Encoding\-Converter.\-cpp\end{DoxyCompactItemize}

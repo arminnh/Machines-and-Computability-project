@@ -1,0 +1,160 @@
+<turingmachine name="Monus" nrtapes="1">
+	<blanksymbol>C</blanksymbol>
+
+	<states>
+		<st name="q0" initial="true" />
+		<st name="q1" />
+		<st name="q2" />
+		<st name="q3" />
+		<st name="q4" />
+		<st name="q5" />
+		<st name="q6" halting="true" />
+	</states>
+
+	<transitions>
+		<tr>
+			<current state="q0">
+				<tape symbol="0" />
+			</current>
+			<next state="q1">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q0">
+				<tape symbol="1" />
+			</current>
+			<next state="q5">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="0" />
+			</current>
+			<next state="q1">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="1" />
+			</current>
+			<next state="q2">
+				<tape symbol="1" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="0" />
+			</current>
+			<next state="q3">
+				<tape symbol="1" direction="L" />
+			</next>
+		</tr>
+		<!-- remove -->
+		
+		<tr>
+			<current state="q2">
+				<tape symbol="0" />
+			</current>
+			<next state="q6">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		
+		<!-- -->
+		<tr>
+			<current state="q2">
+				<tape symbol="1" />
+			</current>
+			<next state="q2">
+				<tape symbol="1" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="C" />
+			</current>
+			<next state="q4">
+				<tape symbol="C" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="0" />
+			</current>
+			<next state="q3">
+				<tape symbol="0" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="1" />
+			</current>
+			<next state="q3">
+				<tape symbol="1" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="C" />
+			</current>
+			<next state="q0">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="0" />
+			</current>
+			<next state="q4">
+				<tape symbol="0" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="1" />
+			</current>
+			<next state="q4">
+				<tape symbol="C" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="C" />
+			</current>
+			<next state="q6">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="0" />
+			</current>
+			<next state="q5">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="1" />
+			</current>
+			<next state="q5">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="C" />
+			</current>
+			<next state="q6">
+				<tape symbol="C" direction="R" />
+			</next>
+		</tr>
+	</transitions>
+	
+	<initialtapes>
+		<tape>000000000010000</tape>
+	</initialtapes>
+</turingmachine>

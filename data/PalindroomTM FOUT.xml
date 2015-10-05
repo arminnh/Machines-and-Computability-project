@@ -1,0 +1,192 @@
+<turingmachine name="Palindromes TM" nrtapes="1">
+	<blanksymbol>B</blanksymbol>
+	<!--<anysymbol></anysymbol>-->
+	<!--<samesymbol></samesymbol>-->
+
+	<states>
+		<st name="q0" initial="true" />
+		<st name="q1" />
+		<st name="q2" />
+		<st name="q3" />
+		<st name="q4" />
+		<st name="q5" />
+		<st name="q6" />
+		<st name="q7" halting="true" />
+	</states>
+	<transitions>
+		<tr>
+			<current state="q0">
+				<tape symbol="B" />
+			</current>
+			<next state="q1">
+				<tape symbol="B" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q0">
+				<tape symbol="0" />
+			</current>
+			<next state="q0">
+				<tape symbol="0" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q0">
+				<tape symbol="1" />
+			</current>
+			<next state="q0">
+				<tape symbol="1" direction="L" />
+			</next>
+		</tr>
+
+		<tr>
+			<current state="q1">
+				<tape symbol="B" />
+			</current>
+			<next state="q7">
+				<tape symbol="1" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="0" />
+			</current>
+			<next state="q2">
+				<tape symbol="B" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="1" />
+			</current>
+			<next state="q4">
+				<tape symbol="B" direction="R" />
+			</next>
+		</tr>
+
+		<tr>
+			<current state="q2">
+				<tape symbol="B" />
+			</current>
+			<next state="q3">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="0" />
+			</current>
+			<next state="q2">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="1" />
+			</current>
+			<next state="q2">
+				<tape symbol="1" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="B" />
+			</current>
+			<next state="q0">
+				<tape symbol="B" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="0" />
+			</current>
+			<next state="q0">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="1" />
+			</current>
+			<next state="q6">
+				<tape symbol="1" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="B" />
+			</current>
+			<next state="q5">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="0" />
+			</current>
+			<next state="q4">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q4">
+				<tape symbol="1" />
+			</current>
+			<next state="q4">
+				<tape symbol="1" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="B" />
+			</current>
+			<next state="q0">
+				<tape symbol="B" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="0" />
+			</current>
+			<next state="q6">
+				<tape symbol="0" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q5">
+				<tape symbol="1" />
+			</current>
+			<next state="q0">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q6">
+				<tape symbol="B" />
+			</current>
+			<next state="q7">
+				<tape symbol="0" direction="S" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q6">
+				<tape symbol="0" />
+			</current>
+			<next state="q6">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q6">
+				<tape symbol="1" />
+			</current>
+			<next state="q6">
+				<tape symbol="B" direction="L" />
+			</next>
+		</tr>
+	</transitions>
+
+    <initialtapes>
+        <tape>10101</tape>
+    </initialtapes>
+</turingmachine>

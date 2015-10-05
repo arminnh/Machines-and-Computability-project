@@ -1,0 +1,481 @@
+\hypertarget{class_c_f_g}{\section{\-C\-F\-G \-Class \-Reference}
+\label{class_c_f_g}\index{\-C\-F\-G@{\-C\-F\-G}}
+}
+
+
+\hyperlink{class_c_f_g}{\-C\-F\-G} class.  
+
+
+
+
+{\ttfamily \#include $<$\-C\-F\-G.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_g_a6a6d74b60d6abc9b91031aaac23067ff}{\hyperlink{class_c_f_g_a6a6d74b60d6abc9b91031aaac23067ff}{\-C\-F\-G} ()}\label{class_c_f_g_a6a6d74b60d6abc9b91031aaac23067ff}
+
+\begin{DoxyCompactList}\small\item\em \-Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_c_f_g_a2f6e0eccd983f665975fd2cc9a891d6d}{\-C\-F\-G} (std\-::set$<$ \hyperlink{class_symbol}{\-Symbol} $>$ var, std\-::set$<$ \hyperlink{class_symbol}{\-Symbol} $>$ ter, std\-::vector$<$ std\-::pair$<$ \hyperlink{class_symbol}{\-Symbol}, std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ $>$ $>$ rules, \hyperlink{class_symbol}{\-Symbol} start, std\-::string name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_f_g}{\-C\-F\-G} \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_c_f_g_a033e92acc40b5c7a78614fbff47211cb}{\-C\-F\-G} (std\-::vector$<$ std\-::pair$<$ \hyperlink{class_symbol}{\-Symbol}, std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$$>$$>$ rules, \hyperlink{class_symbol}{\-Symbol} start, std\-::string name)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_f_g}{\-C\-F\-G} \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_c_f_g_a7a9e0feb406099038faea4c67ef31786}{\hyperlink{class_c_f_g_a7a9e0feb406099038faea4c67ef31786}{$\sim$\-C\-F\-G} ()}\label{class_c_f_g_a7a9e0feb406099038faea4c67ef31786}
+
+\begin{DoxyCompactList}\small\item\em \-Default destructor. \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \hyperlink{class_c_f_g_a6f9ff5f8424c172ad7b7bd27722f2769}{get\-Variables} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the variables of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \hyperlink{class_c_f_g_a2796f5730364b7337bb40180713d0ea4}{get\-Terminals} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the terminals of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::pair$<$ \hyperlink{class_symbol}{\-Symbol}, \*
+std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ $>$ $>$ \hyperlink{class_c_f_g_adb1c77c1901d8ed60a275b32d33f45a1}{get\-Rules} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the rules of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol}{\-Symbol} \hyperlink{class_c_f_g_a589b27d27aecf99c10a5b1de5f1ec16b}{get\-Start\-Symbol} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the start symbol of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_aea6e13f225aaa4149fffacd9e74d0a16}{is\-Consistent} () const 
+\begin{DoxyCompactList}\small\item\em \-Test if the \hyperlink{class_c_f_g}{\-C\-F\-G} is legitimate. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_a8d83c48ca1e83ed8d51823ebcd9a147e}{is\-In\-C\-N\-F} () const 
+\begin{DoxyCompactList}\small\item\em \-Test if the \hyperlink{class_c_f_g}{\-C\-F\-G} is in \-C\-N\-F. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_ae31c239915f8b277ac3c5e2411d65546}{is\-Defined\-Symbol} (const \hyperlink{class_symbol}{\-Symbol} \&symbol) const 
+\begin{DoxyCompactList}\small\item\em \-Test if the symbol defined in the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_af948fe36ac86b3a1c1d05f9d017ee7b9}{is\-Defined\-Terminal} (const \hyperlink{class_symbol}{\-Symbol} \&symbol) const 
+\begin{DoxyCompactList}\small\item\em \-Test if the symbol is defined as a terminal. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_a388a133e1134133d5190d8f4e4845042}{is\-Defined\-Variable} (const \hyperlink{class_symbol}{\-Symbol} \&symbol) const 
+\begin{DoxyCompactList}\small\item\em \-Test if the symbol is defined as a variable. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_aef9f3ebd336911e82b732ad30bc85669}{is\-Defined\-Rule} (const std\-::pair$<$ \hyperlink{class_symbol}{\-Symbol}, std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ $>$ \&rule) const 
+\begin{DoxyCompactList}\small\item\em \-Test if the rules is defined in the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_a6ab4792601e0a00bbc3cc8c2b3540f6a}{is\-Used\-Within\-Production} (const \hyperlink{class_symbol}{\-Symbol} \&) const 
+\begin{DoxyCompactList}\small\item\em \-Test if a symbol is used in a production. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \hyperlink{class_c_f_g_a933bbf12de09ca270ea4ee8d08ce8b2d}{use\-Rule} (std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ w, unsigned int i, unsigned int j) const 
+\begin{DoxyCompactList}\small\item\em \-Use a rule. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_c_f_g_acba40d8b10d18c6bd51c639a44aa343a}{use\-Rules} (std\-::vector$<$ std\-::pair$<$ int, int $>$ $>$ rules) const 
+\begin{DoxyCompactList}\small\item\em \-Apply a list of rules to create a string. \end{DoxyCompactList}\item 
+\hyperlink{class_finite_automaton}{\-Finite\-Automaton} \hyperlink{class_c_f_g_adae376cdf230547cc7b5d342aa9d0109}{generate\-P\-D\-A} () const 
+\begin{DoxyCompactList}\small\item\em \-Generate a \-P\-D\-A that accepts by empty stack. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_ae6cbc12ca5206370ed5b87cfea741a03}{is\-Member} (std\-::string s) const 
+\begin{DoxyCompactList}\small\item\em \-Test if a string is a member of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_f_g_afff1ac4ecf5e09206a0a5081dc2ab3eb}{is\-Member} (const std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \&) const 
+\begin{DoxyCompactList}\small\item\em \-Tests if a vector of \-Symbols is a member of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \hyperlink{class_c_f_g_a8dc1412978ccd2a1744004525bf8bb9c}{heads\-For\-Production\-Body} (const std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ \&body) const 
+\begin{DoxyCompactList}\small\item\em \-Get the heads that produce the body. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_f_g_a6c0b5439044e9a3e152e49ebcbfd68e3}{set\-Rules} (std\-::vector$<$ std\-::pair$<$ \hyperlink{class_symbol}{\-Symbol}, std\-::vector$<$ \hyperlink{class_symbol}{\-Symbol} $>$ $>$ $>$ rules)
+\begin{DoxyCompactList}\small\item\em \-Set the rules for the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_f_g_a8b938a7d91a94363ea2e5331566a4db5}{push\-Variable} (\hyperlink{class_symbol}{\-Symbol} variable)
+\begin{DoxyCompactList}\small\item\em \-Add a variable to the \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_f_g_a9c88d8e8590d72d473cdbb8ec81e2ff5}{generate\-X\-M\-L} (std\-::string doc)
+\begin{DoxyCompactList}\small\item\em \-Generate an \-X\-M\-L file out of the current \hyperlink{class_c_f_g}{\-C\-F\-G}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_f_g_a62fdc25beb43c0348577d873bb694a46}{std\-::ostream \& \hyperlink{class_c_f_g_a62fdc25beb43c0348577d873bb694a46}{operator$<$$<$} (std\-::ostream \&, \hyperlink{class_c_f_g}{\-C\-F\-G} const \&)}\label{class_c_f_g_a62fdc25beb43c0348577d873bb694a46}
+
+\begin{DoxyCompactList}\small\item\em \-Overloaded $<$$<$ operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_c_f_g}{\-C\-F\-G} class. 
+
+\-This class represents a \-Context \-Free \-Grammar. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_c_f_g_a2f6e0eccd983f665975fd2cc9a891d6d}{\index{\-C\-F\-G@{\-C\-F\-G}!\-C\-F\-G@{\-C\-F\-G}}
+\index{\-C\-F\-G@{\-C\-F\-G}!CFG@{\-C\-F\-G}}
+\subsubsection[{\-C\-F\-G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-F\-G\-::\-C\-F\-G} (
+\begin{DoxyParamCaption}
+\item[{std\-::set$<$ {\bf \-Symbol} $>$}]{var, }
+\item[{std\-::set$<$ {\bf \-Symbol} $>$}]{ter, }
+\item[{std\-::vector$<$ std\-::pair$<$ {\bf \-Symbol}, std\-::vector$<$ {\bf \-Symbol} $>$ $>$ $>$}]{rules, }
+\item[{{\bf \-Symbol}}]{start, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_c_f_g_a2f6e0eccd983f665975fd2cc9a891d6d}
+
+
+\hyperlink{class_c_f_g}{\-C\-F\-G} \-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em var} & \-Variables of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em ter} & \-Terminals of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em rules} & \-The rules of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em start} & \-The start symbol of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em name} & \-The name of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_f_g_a033e92acc40b5c7a78614fbff47211cb}{\index{\-C\-F\-G@{\-C\-F\-G}!\-C\-F\-G@{\-C\-F\-G}}
+\index{\-C\-F\-G@{\-C\-F\-G}!CFG@{\-C\-F\-G}}
+\subsubsection[{\-C\-F\-G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-F\-G\-::\-C\-F\-G} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::pair$<$ {\bf \-Symbol}, std\-::vector$<$ {\bf \-Symbol} $>$$>$$>$}]{rules, }
+\item[{{\bf \-Symbol}}]{start, }
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_c_f_g_a033e92acc40b5c7a78614fbff47211cb}
+
+
+\hyperlink{class_c_f_g}{\-C\-F\-G} \-Constructor. 
+
+\-This constructor will automatically extract the variables and terminals from the rules.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rules} & \-The rules of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em start} & \-The start symbol of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+{\em name} & \-The name of the \hyperlink{class_c_f_g}{\-C\-F\-G}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_c_f_g_adae376cdf230547cc7b5d342aa9d0109}{\index{\-C\-F\-G@{\-C\-F\-G}!generate\-P\-D\-A@{generate\-P\-D\-A}}
+\index{generate\-P\-D\-A@{generate\-P\-D\-A}!CFG@{\-C\-F\-G}}
+\subsubsection[{generate\-P\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Finite\-Automaton} {\bf \-C\-F\-G\-::generate\-P\-D\-A} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_adae376cdf230547cc7b5d342aa9d0109}
+
+
+\-Generate a \-P\-D\-A that accepts by empty stack. 
+
+\begin{DoxyReturn}{\-Returns}
+\-A \hyperlink{class_finite_automaton}{\-Finite\-Automaton}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a9c88d8e8590d72d473cdbb8ec81e2ff5}{\index{\-C\-F\-G@{\-C\-F\-G}!generate\-X\-M\-L@{generate\-X\-M\-L}}
+\index{generate\-X\-M\-L@{generate\-X\-M\-L}!CFG@{\-C\-F\-G}}
+\subsubsection[{generate\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-F\-G\-::generate\-X\-M\-L} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{doc}
+\end{DoxyParamCaption}
+)}}\label{class_c_f_g_a9c88d8e8590d72d473cdbb8ec81e2ff5}
+
+
+\-Generate an \-X\-M\-L file out of the current \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & of the new \-X\-M\-L file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_f_g_adb1c77c1901d8ed60a275b32d33f45a1}{\index{\-C\-F\-G@{\-C\-F\-G}!get\-Rules@{get\-Rules}}
+\index{get\-Rules@{get\-Rules}!CFG@{\-C\-F\-G}}
+\subsubsection[{get\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::pair$<$ {\bf \-Symbol}, std\-::vector$<$ {\bf \-Symbol} $>$ $>$ $>$ {\bf \-C\-F\-G\-::get\-Rules} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_adb1c77c1901d8ed60a275b32d33f45a1}
+
+
+\-Get the rules of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+\begin{DoxyReturn}{\-Returns}
+\-S\-T\-L vector of pairs.
+\end{DoxyReturn}
+\-The first element of each pair is the \-Head of the rule. \-The second element of each pair is the \-Body of the rule. \hypertarget{class_c_f_g_a589b27d27aecf99c10a5b1de5f1ec16b}{\index{\-C\-F\-G@{\-C\-F\-G}!get\-Start\-Symbol@{get\-Start\-Symbol}}
+\index{get\-Start\-Symbol@{get\-Start\-Symbol}!CFG@{\-C\-F\-G}}
+\subsubsection[{get\-Start\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol} {\bf \-C\-F\-G\-::get\-Start\-Symbol} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a589b27d27aecf99c10a5b1de5f1ec16b}
+
+
+\-Get the start symbol of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+\begin{DoxyReturn}{\-Returns}
+\-Start symbol. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a2796f5730364b7337bb40180713d0ea4}{\index{\-C\-F\-G@{\-C\-F\-G}!get\-Terminals@{get\-Terminals}}
+\index{get\-Terminals@{get\-Terminals}!CFG@{\-C\-F\-G}}
+\subsubsection[{get\-Terminals}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ {\bf \-Symbol} $>$ {\bf \-C\-F\-G\-::get\-Terminals} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a2796f5730364b7337bb40180713d0ea4}
+
+
+\-Get the terminals of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+\begin{DoxyReturn}{\-Returns}
+\-S\-T\-L vector containing the terminals of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a6f9ff5f8424c172ad7b7bd27722f2769}{\index{\-C\-F\-G@{\-C\-F\-G}!get\-Variables@{get\-Variables}}
+\index{get\-Variables@{get\-Variables}!CFG@{\-C\-F\-G}}
+\subsubsection[{get\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ {\bf \-Symbol} $>$ {\bf \-C\-F\-G\-::get\-Variables} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a6f9ff5f8424c172ad7b7bd27722f2769}
+
+
+\-Get the variables of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+\begin{DoxyReturn}{\-Returns}
+\-S\-T\-L vector containing the variables of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a8dc1412978ccd2a1744004525bf8bb9c}{\index{\-C\-F\-G@{\-C\-F\-G}!heads\-For\-Production\-Body@{heads\-For\-Production\-Body}}
+\index{heads\-For\-Production\-Body@{heads\-For\-Production\-Body}!CFG@{\-C\-F\-G}}
+\subsubsection[{heads\-For\-Production\-Body}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ {\bf \-Symbol} $>$ {\bf \-C\-F\-G\-::heads\-For\-Production\-Body} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf \-Symbol} $>$ \&}]{body}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a8dc1412978ccd2a1744004525bf8bb9c}
+
+
+\-Get the heads that produce the body. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em body} & \-The body for which a head must be found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A set of heads. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_aea6e13f225aaa4149fffacd9e74d0a16}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Consistent@{is\-Consistent}}
+\index{is\-Consistent@{is\-Consistent}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Consistent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Consistent} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_aea6e13f225aaa4149fffacd9e74d0a16}
+
+
+\-Test if the \hyperlink{class_c_f_g}{\-C\-F\-G} is legitimate. 
+
+\begin{DoxyReturn}{\-Returns}
+\-True if the \hyperlink{class_c_f_g}{\-C\-F\-G} is legal. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_aef9f3ebd336911e82b732ad30bc85669}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Defined\-Rule@{is\-Defined\-Rule}}
+\index{is\-Defined\-Rule@{is\-Defined\-Rule}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Defined\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Defined\-Rule} (
+\begin{DoxyParamCaption}
+\item[{const std\-::pair$<$ {\bf \-Symbol}, std\-::vector$<$ {\bf \-Symbol} $>$ $>$ \&}]{rule}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_aef9f3ebd336911e82b732ad30bc85669}
+
+
+\-Test if the rules is defined in the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rule} & \-The rule.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the rule is defined in the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_ae31c239915f8b277ac3c5e2411d65546}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Defined\-Symbol@{is\-Defined\-Symbol}}
+\index{is\-Defined\-Symbol@{is\-Defined\-Symbol}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Defined\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Defined\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Symbol} \&}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_ae31c239915f8b277ac3c5e2411d65546}
+
+
+\-Test if the symbol defined in the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The symbol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol is defined. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_af948fe36ac86b3a1c1d05f9d017ee7b9}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Defined\-Terminal@{is\-Defined\-Terminal}}
+\index{is\-Defined\-Terminal@{is\-Defined\-Terminal}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Defined\-Terminal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Defined\-Terminal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Symbol} \&}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_af948fe36ac86b3a1c1d05f9d017ee7b9}
+
+
+\-Test if the symbol is defined as a terminal. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The symbol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True symbol is a terminal. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a388a133e1134133d5190d8f4e4845042}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Defined\-Variable@{is\-Defined\-Variable}}
+\index{is\-Defined\-Variable@{is\-Defined\-Variable}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Defined\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Defined\-Variable} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Symbol} \&}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a388a133e1134133d5190d8f4e4845042}
+
+
+\-Test if the symbol is defined as a variable. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The symbol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol is defined as a variable. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a8d83c48ca1e83ed8d51823ebcd9a147e}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-In\-C\-N\-F@{is\-In\-C\-N\-F}}
+\index{is\-In\-C\-N\-F@{is\-In\-C\-N\-F}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-In\-C\-N\-F}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-In\-C\-N\-F} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a8d83c48ca1e83ed8d51823ebcd9a147e}
+
+
+\-Test if the \hyperlink{class_c_f_g}{\-C\-F\-G} is in \-C\-N\-F. 
+
+\begin{DoxyReturn}{\-Returns}
+\-True if the \hyperlink{class_c_f_g}{\-C\-F\-G} is in \-C\-N\-F. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_ae6cbc12ca5206370ed5b87cfea741a03}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Member@{is\-Member}}
+\index{is\-Member@{is\-Member}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Member}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Member} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{s}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_ae6cbc12ca5206370ed5b87cfea741a03}
+
+
+\-Test if a string is a member of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em s} & \-The string to be tested.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the string is a member of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_afff1ac4ecf5e09206a0a5081dc2ab3eb}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Member@{is\-Member}}
+\index{is\-Member@{is\-Member}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Member}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Member} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf \-Symbol} $>$ \&}]{s}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_afff1ac4ecf5e09206a0a5081dc2ab3eb}
+
+
+\-Tests if a vector of \-Symbols is a member of the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+\-This helper method uses the \-C\-Y\-K algorithm to test membership.
+
+\begin{DoxyReturn}{\-Returns}
+\-True if the vector of symbols are accepted by the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a6ab4792601e0a00bbc3cc8c2b3540f6a}{\index{\-C\-F\-G@{\-C\-F\-G}!is\-Used\-Within\-Production@{is\-Used\-Within\-Production}}
+\index{is\-Used\-Within\-Production@{is\-Used\-Within\-Production}!CFG@{\-C\-F\-G}}
+\subsubsection[{is\-Used\-Within\-Production}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-F\-G\-::is\-Used\-Within\-Production} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Symbol} \&}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a6ab4792601e0a00bbc3cc8c2b3540f6a}
+
+
+\-Test if a symbol is used in a production. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The symbol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol is used. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_a8b938a7d91a94363ea2e5331566a4db5}{\index{\-C\-F\-G@{\-C\-F\-G}!push\-Variable@{push\-Variable}}
+\index{push\-Variable@{push\-Variable}!CFG@{\-C\-F\-G}}
+\subsubsection[{push\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-F\-G\-::push\-Variable} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Symbol}}]{variable}
+\end{DoxyParamCaption}
+)}}\label{class_c_f_g_a8b938a7d91a94363ea2e5331566a4db5}
+
+
+\-Add a variable to the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em variable} & \-The symbol to be pushed as a variable. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_f_g_a6c0b5439044e9a3e152e49ebcbfd68e3}{\index{\-C\-F\-G@{\-C\-F\-G}!set\-Rules@{set\-Rules}}
+\index{set\-Rules@{set\-Rules}!CFG@{\-C\-F\-G}}
+\subsubsection[{set\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-F\-G\-::set\-Rules} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::pair$<$ {\bf \-Symbol}, std\-::vector$<$ {\bf \-Symbol} $>$ $>$ $>$}]{rules}
+\end{DoxyParamCaption}
+)}}\label{class_c_f_g_a6c0b5439044e9a3e152e49ebcbfd68e3}
+
+
+\-Set the rules for the \hyperlink{class_c_f_g}{\-C\-F\-G}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rules} & \-The rules to be set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_c_f_g_a933bbf12de09ca270ea4ee8d08ce8b2d}{\index{\-C\-F\-G@{\-C\-F\-G}!use\-Rule@{use\-Rule}}
+\index{use\-Rule@{use\-Rule}!CFG@{\-C\-F\-G}}
+\subsubsection[{use\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf \-Symbol} $>$ {\bf \-C\-F\-G\-::use\-Rule} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf \-Symbol} $>$}]{w, }
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{j}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_a933bbf12de09ca270ea4ee8d08ce8b2d}
+
+
+\-Use a rule. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em w} & \-The rule on which to operate. \\
+\hline
+{\em i} & \-The index of the rule to be used. \\
+\hline
+{\em j} & \-The variable in rule {\ttfamily w} on which the rule should be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The new rule where the variabl {\ttfamily j} was substituted by the rule with index {\ttfamily i}. 
+\end{DoxyReturn}
+\hypertarget{class_c_f_g_acba40d8b10d18c6bd51c639a44aa343a}{\index{\-C\-F\-G@{\-C\-F\-G}!use\-Rules@{use\-Rules}}
+\index{use\-Rules@{use\-Rules}!CFG@{\-C\-F\-G}}
+\subsubsection[{use\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-C\-F\-G\-::use\-Rules} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::pair$<$ int, int $>$ $>$}]{rules}
+\end{DoxyParamCaption}
+) const}}\label{class_c_f_g_acba40d8b10d18c6bd51c639a44aa343a}
+
+
+\-Apply a list of rules to create a string. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rules} & \-The list of rules to be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The resulting string. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-C\-F\-G/\-C\-F\-G.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-C\-F\-G/\-C\-F\-G.\-cpp\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-C\-F\-G/\-C\-Y\-K.\-cpp\end{DoxyCompactItemize}

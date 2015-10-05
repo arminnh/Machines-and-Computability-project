@@ -1,0 +1,540 @@
+\hypertarget{classtum_1_1_transition}{\section{tum\-:\-:\-Transition \-Class \-Reference}
+\label{classtum_1_1_transition}\index{tum\-::\-Transition@{tum\-::\-Transition}}
+}
+
+
+\hyperlink{classtum_1_1_transition}{\-Transition} class for a \-Turing \-Machine.  
+
+
+
+
+{\ttfamily \#include $<$\-T\-M\-Transition.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtum_1_1_transition_aeafb07a1d29496cb6834178df25f7275}{\hyperlink{classtum_1_1_transition_aeafb07a1d29496cb6834178df25f7275}{\-Transition} ()}\label{classtum_1_1_transition_aeafb07a1d29496cb6834178df25f7275}
+
+\begin{DoxyCompactList}\small\item\em \-Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition_af7b719279a1f9de452baf8c1d856032b}{\-Transition} (\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$tm)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition_adb12105740c3378d2f439f82930853b6}{\-Transition} (int \hyperlink{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}{source\-State\-Index}, int \hyperlink{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}{target\-State\-Index})
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition_aac25b7108a75450a76ef25d653fb0d11}{\-Transition} (\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$, int \hyperlink{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}{source\-State\-Index}, int \hyperlink{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}{target\-State\-Index})
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition_acdfe90d7763a6e08ab05052071bbb4b6}{\-Transition} (int \hyperlink{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}{source\-State\-Index}, int \hyperlink{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}{target\-State\-Index}, std\-::vector$<$ std\-::tuple$<$ \-Character, \-Character, \-Direction $>$$>$ symbols\-And\-Directions)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classtum_1_1_transition_a64652bc9bc758c92db3442e6a671a416}{const \hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$ \hyperlink{classtum_1_1_transition_a64652bc9bc758c92db3442e6a671a416}{turing\-Machine} () const }\label{classtum_1_1_transition_a64652bc9bc758c92db3442e6a671a416}
+
+\begin{DoxyCompactList}\small\item\em \-Get the turingmachine this transition is part of. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_aa89e4028a1ad27826d58b04acae097c2}{set\-Turing\-Machine} (\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$tm)
+\begin{DoxyCompactList}\small\item\em \-Set the turingmachine this transition is part of. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_a7f2608b11b491ce56037acf65f6c9ab9}{set\-Source\-State} (int state\-Index)
+\begin{DoxyCompactList}\small\item\em \-Set the source state. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_abe41aecbe7d15172e81d6a2f81bdb2f2}{set\-Target\-State} (int state\-Index)
+\begin{DoxyCompactList}\small\item\em \-Set the target state. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_a460f2c7e27374a21b89efb92494bcb55}{state\-Index\-Changed\-From\-To} (int from, int to)
+\begin{DoxyCompactList}\small\item\em \-Change a states index. \end{DoxyCompactList}\item 
+const \hyperlink{classtum_1_1_state}{\-State} \& \hyperlink{classtum_1_1_transition_ad94749a902d937b0a8d06e98b5395b4e}{source\-State} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the source state. \end{DoxyCompactList}\item 
+const \hyperlink{classtum_1_1_state}{\-State} \& \hyperlink{classtum_1_1_transition_a6f964a8db582ca8ebd697dbde08ddb31}{target\-State} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the target state. \end{DoxyCompactList}\item 
+int \hyperlink{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}{source\-State\-Index} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the source states index. \end{DoxyCompactList}\item 
+int \hyperlink{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}{target\-State\-Index} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the target states index. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_a7c0c01baa608cbb53216eeb0376e5884}{set\-Tape} (int tape\-Index, \-Character current\-Tape\-Symbol, \-Character new\-Tape\-Symbol, \-Direction direction)
+\begin{DoxyCompactList}\small\item\em \-Define a new set of instructions for this transition on tape {\ttfamily tape\-Index}. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_transition}{\-Transition} \& \hyperlink{classtum_1_1_transition_a0154555df92f4064a6cddb6d95e30734}{set\-Next\-Tape} (\-Character current\-Tape\-Symbol, \-Character new\-Tape\-Symbol, \-Direction direction)
+\begin{DoxyCompactList}\small\item\em \-Set a new transition on the next tape. \end{DoxyCompactList}\item 
+int \hyperlink{classtum_1_1_transition_a1a441e5bd91e94c49656ec81ef41ecc5}{number\-Of\-Tapes} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the number of tapes. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_a4a5f32d06751b1d98823668c699e7267}{is\-Defined\-Tape} (int tape\-Index) const 
+\begin{DoxyCompactList}\small\item\em \-Test if tape exists. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_afd75b7a89193f35a52e80c2588b7d491}{is\-Current\-Tape\-Symbol\-For\-Tape} (int tape\-Index, \-Character symbol) const 
+\begin{DoxyCompactList}\small\item\em \-Test if given symbol is current symbol on the tape. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_adba735359ed2a7342433bcf4915ee45d}{is\-Next\-Tape\-Symbol\-For\-Tape} (int tape\-Index, \-Character symbol) const 
+\begin{DoxyCompactList}\small\item\em \-Test if given symbol is the next symbol on the tape. \end{DoxyCompactList}\item 
+\-Character \hyperlink{classtum_1_1_transition_a9832b64ebb30e9f9ae951baebbad95e3}{current\-Tape\-Symbol\-For\-Tape} (int tape\-Index) const 
+\begin{DoxyCompactList}\small\item\em \-Get the current symbol on the tape. \end{DoxyCompactList}\item 
+\-Character \hyperlink{classtum_1_1_transition_a53b8b9200b2f8a22c9faa9358f2725e3}{next\-Tape\-Symbol\-For\-Tape} (int tape\-Index) const 
+\begin{DoxyCompactList}\small\item\em \-Get the next symbol on the tape. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_ace4f57aa9cbea86b4ecdd7f5ffce0229}{is\-Direction\-For\-Tape} (int tape\-Index, \-Direction direction) const 
+\begin{DoxyCompactList}\small\item\em \-Test if given direction is direction tape will move in. \end{DoxyCompactList}\item 
+\-Direction \hyperlink{classtum_1_1_transition_a77e8a108cfdc46da49ceee88afc1acaf}{target\-Direction\-For\-Tape} (int tape\-Index) const 
+\begin{DoxyCompactList}\small\item\em \-Get the direction the tape will move in. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_a905647f3ad714c7cbb4723e9e349adf7}{equal\-State\-Transition} (const \hyperlink{classtum_1_1_transition}{\-Transition} \&other) const 
+\begin{DoxyCompactList}\small\item\em \-Test if 2 transitions have the same states. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_transition_a4790ea949ee9d5b7999f700c97f8bf8f}{equal\-Input\-Requirements} (const \hyperlink{classtum_1_1_transition}{\-Transition} \&other) const 
+\begin{DoxyCompactList}\small\item\em \-Test if 2 transitions have the same input requirements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtum_1_1_transition_ab24951c64864296cfb8a1dc4402a0f43}{std\-::ostream \& \hyperlink{classtum_1_1_transition_ab24951c64864296cfb8a1dc4402a0f43}{operator$<$$<$} (std\-::ostream \&, const \hyperlink{classtum_1_1_transition}{\-Transition} \&)}\label{classtum_1_1_transition_ab24951c64864296cfb8a1dc4402a0f43}
+
+\begin{DoxyCompactList}\small\item\em \-Output operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classtum_1_1_transition}{\-Transition} class for a \-Turing \-Machine. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtum_1_1_transition_af7b719279a1f9de452baf8c1d856032b}{\index{tum\-::\-Transition@{tum\-::\-Transition}!\-Transition@{\-Transition}}
+\index{\-Transition@{\-Transition}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Transition\-::\-Transition} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Turing\-Machine} $\ast$}]{tm}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_af7b719279a1f9de452baf8c1d856032b}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tm} & \-The turingmachine the transition is part of. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_transition_adb12105740c3378d2f439f82930853b6}{\index{tum\-::\-Transition@{tum\-::\-Transition}!\-Transition@{\-Transition}}
+\index{\-Transition@{\-Transition}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Transition\-::\-Transition} (
+\begin{DoxyParamCaption}
+\item[{int}]{source\-State\-Index, }
+\item[{int}]{target\-State\-Index}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_adb12105740c3378d2f439f82930853b6}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em source\-State\-Index} & \-The source of the transition. \\
+\hline
+{\em target\-State\-Index} & \-The target of the transition. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_transition_aac25b7108a75450a76ef25d653fb0d11}{\index{tum\-::\-Transition@{tum\-::\-Transition}!\-Transition@{\-Transition}}
+\index{\-Transition@{\-Transition}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Transition\-::\-Transition} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Turing\-Machine} $\ast$}]{tm, }
+\item[{int}]{source\-State\-Index, }
+\item[{int}]{target\-State\-Index}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_aac25b7108a75450a76ef25d653fb0d11}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tm} & \-The turingmachine the transition is part of. \\
+\hline
+{\em source\-State\-Index} & \-The source of the transition. \\
+\hline
+{\em target\-State\-Index} & \-The target of the transition. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_transition_acdfe90d7763a6e08ab05052071bbb4b6}{\index{tum\-::\-Transition@{tum\-::\-Transition}!\-Transition@{\-Transition}}
+\index{\-Transition@{\-Transition}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Transition\-::\-Transition} (
+\begin{DoxyParamCaption}
+\item[{int}]{source\-State\-Index, }
+\item[{int}]{target\-State\-Index, }
+\item[{std\-::vector$<$ std\-::tuple$<$ \-Character, \-Character, \-Direction $>$$>$}]{symbols\-And\-Directions}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_acdfe90d7763a6e08ab05052071bbb4b6}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em source\-State\-Index} & \-The source of the transition. \\
+\hline
+{\em target\-State\-Index} & \-The target of the transition. \\
+\hline
+{\em symbols\-And\-Directions} & \-A vector where each element defines the current character, new character, direction head should move. \-The vector contains the tuples for each tape of the turing machine (\-In case of single tape \-T\-M, vector size = 1). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtum_1_1_transition_a9832b64ebb30e9f9ae951baebbad95e3}{\index{tum\-::\-Transition@{tum\-::\-Transition}!current\-Tape\-Symbol\-For\-Tape@{current\-Tape\-Symbol\-For\-Tape}}
+\index{current\-Tape\-Symbol\-For\-Tape@{current\-Tape\-Symbol\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{current\-Tape\-Symbol\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}\-Character {\bf tum\-::\-Transition\-::current\-Tape\-Symbol\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a9832b64ebb30e9f9ae951baebbad95e3}
+
+
+\-Get the current symbol on the tape. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The requested \-Character. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a4790ea949ee9d5b7999f700c97f8bf8f}{\index{tum\-::\-Transition@{tum\-::\-Transition}!equal\-Input\-Requirements@{equal\-Input\-Requirements}}
+\index{equal\-Input\-Requirements@{equal\-Input\-Requirements}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{equal\-Input\-Requirements}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::equal\-Input\-Requirements} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Transition} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a4790ea949ee9d5b7999f700c97f8bf8f}
+
+
+\-Test if 2 transitions have the same input requirements. 
+
+\-Two transitions have the same input requirements if they have the same source state and the same amount of tapes. \begin{DoxyReturn}{\-Returns}
+\-True if both transitions have the same input requirements. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a905647f3ad714c7cbb4723e9e349adf7}{\index{tum\-::\-Transition@{tum\-::\-Transition}!equal\-State\-Transition@{equal\-State\-Transition}}
+\index{equal\-State\-Transition@{equal\-State\-Transition}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{equal\-State\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::equal\-State\-Transition} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Transition} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a905647f3ad714c7cbb4723e9e349adf7}
+
+
+\-Test if 2 transitions have the same states. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em other} & \-The other transition. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if both transitions have the same source and target states. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_afd75b7a89193f35a52e80c2588b7d491}{\index{tum\-::\-Transition@{tum\-::\-Transition}!is\-Current\-Tape\-Symbol\-For\-Tape@{is\-Current\-Tape\-Symbol\-For\-Tape}}
+\index{is\-Current\-Tape\-Symbol\-For\-Tape@{is\-Current\-Tape\-Symbol\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{is\-Current\-Tape\-Symbol\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::is\-Current\-Tape\-Symbol\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index, }
+\item[{\-Character}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_afd75b7a89193f35a52e80c2588b7d491}
+
+
+\-Test if given symbol is current symbol on the tape. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+{\em symbol} & \-The symbol to be tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol matches the \-Character under the head. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a4a5f32d06751b1d98823668c699e7267}{\index{tum\-::\-Transition@{tum\-::\-Transition}!is\-Defined\-Tape@{is\-Defined\-Tape}}
+\index{is\-Defined\-Tape@{is\-Defined\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{is\-Defined\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::is\-Defined\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a4a5f32d06751b1d98823668c699e7267}
+
+
+\-Test if tape exists. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape to be tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the tape exists. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_ace4f57aa9cbea86b4ecdd7f5ffce0229}{\index{tum\-::\-Transition@{tum\-::\-Transition}!is\-Direction\-For\-Tape@{is\-Direction\-For\-Tape}}
+\index{is\-Direction\-For\-Tape@{is\-Direction\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{is\-Direction\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::is\-Direction\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index, }
+\item[{\-Direction}]{direction}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_ace4f57aa9cbea86b4ecdd7f5ffce0229}
+
+
+\-Test if given direction is direction tape will move in. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+{\em direction} & \-The direction to be tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the direction is correct. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_adba735359ed2a7342433bcf4915ee45d}{\index{tum\-::\-Transition@{tum\-::\-Transition}!is\-Next\-Tape\-Symbol\-For\-Tape@{is\-Next\-Tape\-Symbol\-For\-Tape}}
+\index{is\-Next\-Tape\-Symbol\-For\-Tape@{is\-Next\-Tape\-Symbol\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{is\-Next\-Tape\-Symbol\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf tum\-::\-Transition\-::is\-Next\-Tape\-Symbol\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index, }
+\item[{\-Character}]{symbol}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_adba735359ed2a7342433bcf4915ee45d}
+
+
+\-Test if given symbol is the next symbol on the tape. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+{\em symbol} & \-The symbol to be tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol matches the next \-Character on the tape. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a53b8b9200b2f8a22c9faa9358f2725e3}{\index{tum\-::\-Transition@{tum\-::\-Transition}!next\-Tape\-Symbol\-For\-Tape@{next\-Tape\-Symbol\-For\-Tape}}
+\index{next\-Tape\-Symbol\-For\-Tape@{next\-Tape\-Symbol\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{next\-Tape\-Symbol\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}\-Character {\bf tum\-::\-Transition\-::next\-Tape\-Symbol\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a53b8b9200b2f8a22c9faa9358f2725e3}
+
+
+\-Get the next symbol on the tape. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The requested \-Character. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a1a441e5bd91e94c49656ec81ef41ecc5}{\index{tum\-::\-Transition@{tum\-::\-Transition}!number\-Of\-Tapes@{number\-Of\-Tapes}}
+\index{number\-Of\-Tapes@{number\-Of\-Tapes}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{number\-Of\-Tapes}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tum\-::\-Transition\-::number\-Of\-Tapes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a1a441e5bd91e94c49656ec81ef41ecc5}
+
+
+\-Get the number of tapes. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The amount of tapes (== index of potential next new tape). 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a0154555df92f4064a6cddb6d95e30734}{\index{tum\-::\-Transition@{tum\-::\-Transition}!set\-Next\-Tape@{set\-Next\-Tape}}
+\index{set\-Next\-Tape@{set\-Next\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{set\-Next\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::set\-Next\-Tape} (
+\begin{DoxyParamCaption}
+\item[{\-Character}]{current\-Tape\-Symbol, }
+\item[{\-Character}]{new\-Tape\-Symbol, }
+\item[{\-Direction}]{direction}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_a0154555df92f4064a6cddb6d95e30734}
+
+
+\-Set a new transition on the next tape. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em current\-Tape\-Symbol} & \hyperlink{class_symbol}{\-Symbol} that will be read. \\
+\hline
+{\em new\-Tape\-Symbol} & \hyperlink{class_symbol}{\-Symbol} that will be written on the tape. \\
+\hline
+{\em direction} & \-The direction the head will move in. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_transition_a7f2608b11b491ce56037acf65f6c9ab9}{\index{tum\-::\-Transition@{tum\-::\-Transition}!set\-Source\-State@{set\-Source\-State}}
+\index{set\-Source\-State@{set\-Source\-State}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{set\-Source\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::set\-Source\-State} (
+\begin{DoxyParamCaption}
+\item[{int}]{state\-Index}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_a7f2608b11b491ce56037acf65f6c9ab9}
+
+
+\-Set the source state. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state\-Index} & \-Index of the source state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This transition (to enable chaining commands). 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a7c0c01baa608cbb53216eeb0376e5884}{\index{tum\-::\-Transition@{tum\-::\-Transition}!set\-Tape@{set\-Tape}}
+\index{set\-Tape@{set\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{set\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::set\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index, }
+\item[{\-Character}]{current\-Tape\-Symbol, }
+\item[{\-Character}]{new\-Tape\-Symbol, }
+\item[{\-Direction}]{direction}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_a7c0c01baa608cbb53216eeb0376e5884}
+
+
+\-Define a new set of instructions for this transition on tape {\ttfamily tape\-Index}. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-Index of the tape. \\
+\hline
+{\em current\-Tape\-Symbol} & \hyperlink{class_symbol}{\-Symbol} that will be read. \\
+\hline
+{\em new\-Tape\-Symbol} & \hyperlink{class_symbol}{\-Symbol} that will be written on the tape. \\
+\hline
+{\em direction} & \-The direction the head will move in. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{\-Note}
+\-If the tape\-Index already exists, the current values for this transition, on the given tape will be overwritten. 
+\end{DoxyNote}
+\hypertarget{classtum_1_1_transition_abe41aecbe7d15172e81d6a2f81bdb2f2}{\index{tum\-::\-Transition@{tum\-::\-Transition}!set\-Target\-State@{set\-Target\-State}}
+\index{set\-Target\-State@{set\-Target\-State}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{set\-Target\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::set\-Target\-State} (
+\begin{DoxyParamCaption}
+\item[{int}]{state\-Index}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_abe41aecbe7d15172e81d6a2f81bdb2f2}
+
+
+\-Set the target state. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state\-Index} & \-Index of the target state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This transition (to enable chaining commands). 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_aa89e4028a1ad27826d58b04acae097c2}{\index{tum\-::\-Transition@{tum\-::\-Transition}!set\-Turing\-Machine@{set\-Turing\-Machine}}
+\index{set\-Turing\-Machine@{set\-Turing\-Machine}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{set\-Turing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::set\-Turing\-Machine} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Turing\-Machine} $\ast$}]{tm}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_aa89e4028a1ad27826d58b04acae097c2}
+
+
+\-Set the turingmachine this transition is part of. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tm} & \-The turingmachine. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_transition_ad94749a902d937b0a8d06e98b5395b4e}{\index{tum\-::\-Transition@{tum\-::\-Transition}!source\-State@{source\-State}}
+\index{source\-State@{source\-State}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{source\-State}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-State} \& {\bf tum\-::\-Transition\-::source\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_ad94749a902d937b0a8d06e98b5395b4e}
+
+
+\-Get the source state. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The source state. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}{\index{tum\-::\-Transition@{tum\-::\-Transition}!source\-State\-Index@{source\-State\-Index}}
+\index{source\-State\-Index@{source\-State\-Index}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{source\-State\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tum\-::\-Transition\-::source\-State\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_aae73e6b6e9720d75f557a3b847b2ccfe}
+
+
+\-Get the source states index. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The source states index. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a460f2c7e27374a21b89efb92494bcb55}{\index{tum\-::\-Transition@{tum\-::\-Transition}!state\-Index\-Changed\-From\-To@{state\-Index\-Changed\-From\-To}}
+\index{state\-Index\-Changed\-From\-To@{state\-Index\-Changed\-From\-To}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{state\-Index\-Changed\-From\-To}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transition} \& {\bf tum\-::\-Transition\-::state\-Index\-Changed\-From\-To} (
+\begin{DoxyParamCaption}
+\item[{int}]{from, }
+\item[{int}]{to}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_transition_a460f2c7e27374a21b89efb92494bcb55}
+
+
+\-Change a states index. 
+
+\-This is used in the case of subroutining. 
+\begin{DoxyParams}{\-Parameters}
+{\em from} & \-The original index. \\
+\hline
+{\em to} & \-The new index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This transition (to enable chaining commands). 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a77e8a108cfdc46da49ceee88afc1acaf}{\index{tum\-::\-Transition@{tum\-::\-Transition}!target\-Direction\-For\-Tape@{target\-Direction\-For\-Tape}}
+\index{target\-Direction\-For\-Tape@{target\-Direction\-For\-Tape}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{target\-Direction\-For\-Tape}]{\setlength{\rightskip}{0pt plus 5cm}\-Direction {\bf tum\-::\-Transition\-::target\-Direction\-For\-Tape} (
+\begin{DoxyParamCaption}
+\item[{int}]{tape\-Index}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a77e8a108cfdc46da49ceee88afc1acaf}
+
+
+\-Get the direction the tape will move in. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tape\-Index} & \-The index of the tape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Requested direction. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_a6f964a8db582ca8ebd697dbde08ddb31}{\index{tum\-::\-Transition@{tum\-::\-Transition}!target\-State@{target\-State}}
+\index{target\-State@{target\-State}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{target\-State}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-State} \& {\bf tum\-::\-Transition\-::target\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_a6f964a8db582ca8ebd697dbde08ddb31}
+
+
+\-Get the target state. 
+
+\begin{DoxyReturn}{\-Returns}
+the target state. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}{\index{tum\-::\-Transition@{tum\-::\-Transition}!target\-State\-Index@{target\-State\-Index}}
+\index{target\-State\-Index@{target\-State\-Index}!tum::Transition@{tum\-::\-Transition}}
+\subsubsection[{target\-State\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tum\-::\-Transition\-::target\-State\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_transition_aed4183fe6e6ec81d162e200689fb1022}
+
+
+\-Get the target states index. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The target states index. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-T\-M\-Transition.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-T\-M\-Transition.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+<CFG name="palindromes">
+	<variables>
+        <v value="P"  />
+        <v value="G"  />
+        <v value="R"  />
+	</variables>
+	<terminals >
+		<t value="0"  />
+		<t value="1"  />
+	</terminals>
+	<productionrules>
+		<rule head="P" body="'0' P '0'" />
+		<rule head="P" body="'1' P '1'" />
+		<rule head="P" body="'0'" />
+		<rule head="P" body="'1'" />
+        <rule head="P" body=""  />
+        <rule head="P" body="'1' G '1'" />
+        <rule head="R" body="P" />
+	</productionrules>
+	<startsymbol value="P" />
+</CFG>

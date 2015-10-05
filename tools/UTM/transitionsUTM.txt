@@ -1,0 +1,194 @@
+UniversalTuringMachine
+Copy3TO4
+ReturnHead3.a
+Copy1TO4.a
+ReturnHead1.a
+ReturnHead4.a
+SetTape2
+FindTransition.a
+FindTransition.b
+(ReturnHead4.b)
+(GoNextTrans)
+ReturnHead4.d
+Copy2TO3AND4
+ReturnHead3.b
+Copy2TO1
+ReturnHead1.b
+CountDirection.a
+CountDirection.b
+CountDirection.c
+ReturnHead2.a
+ReturnHead2.b
+ReturnHead2.c
+MoveHead1Left.a
+MoveHead1Left.b
+MoveHead1Right
+Copy1TO4.b
+ReturnHead1.d
+ReturnHead4.c
+WriteBlankLeft
+ReturnHead2.d
+SetTape2Blank
+WriteBlankRight
+ReturnHead1.c
+NoTransFound
+
+Copy3TO4	a, a, 1, a	Copy3TO4	r, S	r, S	1, R	1, R
+Copy3TO4	a, a, “.”, a	Copy3TO4	r, S	r, S	“.”, R	“.”, R
+Copy3TO4	a, a, B, a	ReturnHead3.a	r, S	r, S	B,L	“;”, R
+						
+ReturnHead3.a	a, a, 1, a	ReturnHead3.a	r, S	r, S	1, L	r, S
+ReturnHead3.a	a, a, “.”, a	ReturnHead3.a	r, S	r, S	., L	r, S
+ReturnHead3.a	a, a, B, a	Copy1TO4.a	r, S	r, S	B, R	r, S
+						
+Copy1TO4.a	1,a,a,a	Copy1TO4.a	1, R	r, S	r, S	1, R
+Copy1TO4.a	“.”,a,a,a	Copy1TO4.a	“.”, R	r, S	r, S	“.”, R
+Copy1TO4.a	0,a,a,a	ReturnHead1.a	0, L	r, S	r, S	B, L
+Copy1TO4.a	B,a,a,a	ReturnHead1.a	B, L	r, S	r, S	B, L
+						
+ReturnHead1.a	1,a,a,a	ReturnHead1.a	1, L	r, S	r, S	r, S
+ReturnHead1.a	“.”,a,a,a	ReturnHead1.a	“.”, L	r, S	r, S	r, S
+ReturnHead1.a	0,a,a,a	ReturnHead4.a	0, R	r, S	r, S	r, S
+ReturnHead1.a	B,a,a,a	ReturnHead4.a	B, R	r, S	r, S	r, S
+						
+ReturnHead4.a	a,a,a,1	ReturnHead4.a	r, S	r, S	r, S	1, L
+ReturnHead4.a	a,a,a,“.”	ReturnHead4.a	r, S	r, S	r, S	“.”, L
+ReturnHead4.a	a,a,a,0	ReturnHead4.a	r, S	r, S	r, S	0, L
+ReturnHead4.a	a,a,a,”;”	ReturnHead4.a	r, S	r, S	r, S	“;”, L
+ReturnHead4.a	a,a,a,B	SetTape2	r, S	r, S	r, S	B, R
+						
+SetTape2	a, 1, a, a	SetTape2	r, S	1, R	r, S	r, S
+SetTape2	a, “.”, a, a	SetTape2	r, S	“.”, R	r, S	r, S
+SetTape2	a, B, a, a	FindTransition.a	r, S	B, R	r, S	r, S
+						
+FindTransition.a	a , 1 , a , 1	FindTransition.a	r, S	1, R	r, S	1, R
+FindTransition.a	a , 1 , a , "." 	(ReturnHead4.b)	r, S	1, R	r, S	“.”, L
+						
+FindTransition.a	a , "." , a , 1	(ReturnHead4.b)	r, S	“.”, R	r, S	1, L
+FindTransition.a	a , "." , a , "." 	FindTransition.a	r, S	“.”, R	r, S	“.”, R
+						
+FindTransition.a	a , ";"  , a , ";"	FindTransition.b	r, S	“;”, R	r, S	“;”, R
+						
+FindTransition.b	a , 1 , a , 1	FindTransition.b	r, S	1, R	r, S	1, R
+FindTransition.b	a , 1 , a , "." 	(ReturnHead4.b)	r, S	1, R	r, S	“.”, L
+						
+FindTransition.b	a , "." , a , 1	(ReturnHead4.b)	r, S	“.”, R	r, S	1, L
+FindTransition.b	a , "." , a , "." 	FindTransition.b	r, S	“.”, R	r, S	“.”, R
+						
+FindTransition.b	a , ";"  , a , B	ReturnHead4.d	r, S	“;”, R	r, S	B, L
+						
+(ReturnHead4.b)	a,a,a,1	(ReturnHead4.b)	r, S	r, S	r, S	1, L
+(ReturnHead4.b)	a,a,a,“.”	(ReturnHead4.b)	r, S	r, S	r, S	“.”, L
+(ReturnHead4.b)	a,a,a,0	(ReturnHead4.b)	r, S	r, S	r, S	0, L
+(ReturnHead4.b)	a,a,a,”;”	(ReturnHead4.b)	r, S	r, S	r, S	“;”, L
+(ReturnHead4.b)	a,a,a,B	(GoNextTrans)	r, S	r, S	r, S	B, R
+						
+(GoNextTrans)	a, 1, a, a	(GoNextTrans)	r, S	1, R	r, S	r, S
+(GoNextTrans)	a, “.”, a, a	(GoNextTrans)	r, S	“.”, R	r, S	r, S
+(GoNextTrans)	a, 0, a, a	FindTransition.a	r, S	0, R	r, S	r, S
+(GoNextTrans)	a, “;”, a, a	(GoNextTrans)	r, S	“;”, R	r, S	r, S
+(GoNextTrans)	a, B, a, a	NoTransFound	r, S	B, S	r, S	r, S
+						
+ReturnHead4.d	a,a,a,1	ReturnHead4.d	r, S	r, S	r, S	1, L
+ReturnHead4.d	a,a,a,“.”	ReturnHead4.d	r, S	r, S	r, S	“.”, L
+ReturnHead4.d	a,a,a,”;”	ReturnHead4.d	r, S	r, S	r, S	“;”, L
+ReturnHead4.d	a,a,a,B	Copy2TO3AND4	r, S	r, S	r, S	B, R
+						
+Copy2TO3AND4	a, 1, a, a	Copy2TO3AND4	r, S	1, R	1, R	1, R
+Copy2TO3AND4	a, “.”, a, a	Copy2TO3AND4	r, S	“.”, R	“.”, R	“.”, R
+Copy2TO3AND4	a, “;”, B, “;”	ReturnHead3.b	r, S	“;”, R	B, L	“;”, R
+						
+ReturnHead3.b	a, a, 1, a	ReturnHead3.b	r, S	r, S	1, L	r, S
+ReturnHead3.b	a, a, “.”, a	ReturnHead3.b	r, S	r, S	., L	r, S
+ReturnHead3.b	a, a, B, a	Copy2TO1	r, S	r, S	B, R	r, S
+						
+Copy2TO1	a, 1, a, a	Copy2TO1	1, R	1, R	r, S	r, S
+Copy2TO1	a, “.”, a, a	Copy2TO1	“.”, R	“.”, R	r, S	r, S
+Copy2TO1	0, “;”, a, a	ReturnHead1.b	0, L	“;”, R	r, S	r, S
+Copy2TO1	B, “;”, a, a	ReturnHead1.b	B, L	“;”, R	r, S	r, S
+						
+ReturnHead1.b	1,a,a,a	ReturnHead1.b	1, L	r, S	r, S	r, S
+ReturnHead1.b	“.”,a,a,a	ReturnHead1.b	“.”, L	r, S	r, S	r, S
+ReturnHead1.b	0,a,a,a	CountDirection.a	0, R	r, S	r, S	r, S
+ReturnHead1.b	B,a,a,a	CountDirection.a	B, R	r, S	r, S	r, S
+						
+CountDirection.a	a, 1, a, a	CountDirection.b	r, S	1, R	r, S	r, S
+						
+CountDirection.b	a, 1, a, a	CountDirection.c	r, S	1, R	r, S	r, S
+CountDirection.b	a, 0, a, a	ReturnHead2.a	r, S	0, L	r, S	r, S
+CountDirection.b	a, B, a, a	ReturnHead2.a	r, S	B, L	r, S	r, S
+						
+CountDirection.c	a, 1, a, a	ReturnHead2.c	r, S	1, R	r, S	r, S
+CountDirection.c	a, 0, a, a	ReturnHead2.b	r, L	0, L	r, S	r, S
+CountDirection.c	a, B, a, a	ReturnHead2.b	r, L	B, L	r, S	r, S
+						
+ReturnHead2.a	a,1,a,a	ReturnHead2.a	r, S	1, L	r, S	r, S
+ReturnHead2.a	a,“.”,a,a	ReturnHead2.a	r, S	“.”, L	r, S	r, S
+ReturnHead2.a	a,0,a,a	ReturnHead2.a	r, S	0, L	r, S	r, S
+ReturnHead2.a	a,”;”,a,a	ReturnHead2.a	r, S	“;”, L	r, S	r, S
+ReturnHead2.a	a,B,a,a	MoveHead1Right	r, S	B, S	r, S	r, S
+
+ReturnHead2.b	a,1,a,a	ReturnHead2.b	r, S	1, L	r, S	r, S
+ReturnHead2.b	a,“.”,a,a	ReturnHead2.b	r, S	“.”, L	r, S	r, S
+ReturnHead2.b	a,0,a,a	ReturnHead2.b	r, S	0, L	r, S	r, S
+ReturnHead2.b	a,”;”,a,a	ReturnHead2.b	r, S	“;”, L	r, S	r, S
+ReturnHead2.b	B,B,a,a	MoveHead1Left.a	B, S	B, S	r, S	r, S
+ReturnHead2.b	1,B,a,a	MoveHead1Left.a	1, L	B, S	r, S	r, S
+ReturnHead2.b	0,B,a,a	MoveHead1Left.a	0, L	B, S	r, S	r, S
+ReturnHead2.b	“.”,B,a,a	MoveHead1Left.a	“.”, L	B, S	r, S	r, S
+						
+ReturnHead2.c	a,1,a,a	ReturnHead2.c	r, S	1, L	r, S	r, S
+ReturnHead2.c	a,“.”,a,a	ReturnHead2.c	r, S	“.”, L	r, S	r, S
+ReturnHead2.c	a,0,a,a	ReturnHead2.c	r, S	0, L	r, S	r, S
+ReturnHead2.c	a,”;”,a,a	ReturnHead2.c	r, S	“;”, L	r, S	r, S
+ReturnHead2.c	a,B,a,a	Copy1TO4.b	r, S	B, R	r, S	r, S
+						
+MoveHead1Left.a	1,a,a,a	MoveHead1Left.b	1, L	r, S	r, S	r, S
+MoveHead1Left.a	“.”,a,a,a	MoveHead1Left.b	“.”, L	r, S	r, S	r, S
+MoveHead1Left.a	B,a,a,a	WriteBlankLeft	0, L	B, L	r, S	r, S
+						
+MoveHead1Left.b	1,a,a,a	MoveHead1Left.b	1, L	r, S	r, S	r, S
+MoveHead1Left.b	“.”,a,a,a	MoveHead1Left.b	“.”, L	r, S	r, S	r, S
+MoveHead1Left.b	0,a,a,a	Copy1TO4.b	0, R	B, R	r, S	r, S
+MoveHead1Left.b	B,a,a,a	Copy1TO4.b	B, R	B, R	r, S	r, S
+						
+MoveHead1Right	1,a,a,a	MoveHead1Right	1, R	r, S	r, S	r, S
+MoveHead1Right	“.”,a,a,a	MoveHead1Right	“.”, R	r, S	r, S	r, S
+MoveHead1Right	0,a,a,a	Copy1TO4.b	0, R	B, R	r, S	r, S
+MoveHead1Right	B,B,a,a	SetTape2Blank	0, R	B, L	r, S	r, S
+						
+Copy1TO4.b	1,a,a,a	Copy1TO4.b	1, R	r, S	r, S	1, R
+Copy1TO4.b	“.”,a,a,a	Copy1TO4.b	“.”, R	r, S	r, S	“.”, R
+Copy1TO4.b	0,a,a,a	ReturnHead1.d	0, L	r, S	r, S	B, L
+Copy1TO4.b	B,a,a,a	ReturnHead1.d	B, L	r, S	r, S	B, L
+						
+ReturnHead1.d	1,a,a,a	ReturnHead1.d	1, L	r, S	r, S	r, S
+ReturnHead1.d	“.”,a,a,a	ReturnHead1.d	“.”, L	r, S	r, S	r, S
+ReturnHead1.d	0,a,a,a	ReturnHead4.c	0, R	r, S	r, S	r, S
+ReturnHead1.d	B,a,a,a	ReturnHead4.c	B, R	r, S	r, S	r, S
+						
+ReturnHead4.c	a,a,a,1	ReturnHead4.c	r, S	r, S	r, S	1, L
+ReturnHead4.c	a,a,a,“.”	ReturnHead4.c	r, S	r, S	r, S	“.”, L
+ReturnHead4.c	a,a,a,0	ReturnHead4.c	r, S	r, S	r, S	0, L
+ReturnHead4.c	a,a,a,”;”	ReturnHead4.c	r, S	r, S	r, S	“;”, L
+ReturnHead4.c	a,a,a,B	FindTransition.a	r, S	r, S	r, S	B, R
+						
+WriteBlankLeft	a,1,a,a	WriteBlankLeft	1, L	1, L	r, S	r, S
+WriteBlankLeft	a,”.”,a,a	WriteBlankLeft	“.”, L	".", L	r, S	r, S
+WriteBlankLeft	B,B,a,a	ReturnHead2.d	B, R	B, R	r, S	r, S
+						
+ReturnHead2.d	a,1,a,a	ReturnHead2.d	r, S	1, R	r, S	r, S
+ReturnHead2.d	a,”.”,a,a	ReturnHead2.d	r, S	“.”, R	r, S	r, S
+ReturnHead2.d	a,B,a,a	Copy1TO4.b	r, S	B, R	r, S	r, S
+						
+SetTape2Blank	a,1,a,a	SetTape2Blank	r, S	1, L	r, S	r, S
+SetTape2Blank	a,”.”,a,a	SetTape2Blank	r, S	“.”, L	r, S	r, S
+SetTape2Blank	a,B,a,a	WriteBlankRight	r, S	B, R	r, S	r, S
+						
+WriteBlankRight	B,1,a,a	WriteBlankRight	1, R	1, R	r, S	r, S
+WriteBlankRight	B,”.”,a,a	WriteBlankRight	“.”, R	“.”, R	r, S	r, S
+WriteBlankRight	B,B,a,a	ReturnHead1.c	B, L	B, R	r, S	r, S
+						
+ReturnHead1.c	1,a,a,a	ReturnHead1.c	1, L	r, S	r, S	r, S
+ReturnHead1.c	“.”,a,a,a	ReturnHead1.c	“.”, L	r, S	r, S	r, S
+ReturnHead1.c	0,a,a,a	Copy1TO4.b	0, R	r, S	r, S	r, S

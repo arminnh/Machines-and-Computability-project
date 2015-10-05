@@ -1,0 +1,193 @@
+\hypertarget{class_arc}{\section{\-Arc \-Class \-Reference}
+\label{class_arc}\index{\-Arc@{\-Arc}}
+}
+
+
+\-Class representing an arc in a finite automaton.  
+
+
+
+
+{\ttfamily \#include $<$finiteautomaton.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_arc_afc8733da11af7ce496f5ca9dedcd1faf}{\-Arc} (const \hyperlink{class_finite_automaton}{\-Finite\-Automaton} $\ast$\hyperlink{class_arc_ae61665122fe9aed275bf86df4e7191a4}{automaton}, std\-::size\-\_\-t \hyperlink{class_arc_a9ae84977f950f68095f888e6faf60282}{index})
+\item 
+const \hyperlink{class_finite_automaton}{\-Finite\-Automaton} $\ast$ \hyperlink{class_arc_ae61665122fe9aed275bf86df4e7191a4}{automaton} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the automaton this arc is part of. \end{DoxyCompactList}\item 
+std\-::size\-\_\-t \hyperlink{class_arc_a9ae84977f950f68095f888e6faf60282}{index} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the index for this automaton. \end{DoxyCompactList}\item 
+\hyperlink{class_state}{\-State} \hyperlink{class_arc_ad7b1ba16c1449ba27e46af59b957aa2f}{source} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the state from which this arc originates. \end{DoxyCompactList}\item 
+\hyperlink{class_state}{\-State} \hyperlink{class_arc_a765fcc6e938545fd1277cd766ba264b4}{target} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the state to which this arc goes. \end{DoxyCompactList}\item 
+int \hyperlink{class_arc_a33a7ffc9c79fff47658aefb4e0e42009}{symbol} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the symbol associated with this arc. \end{DoxyCompactList}\item 
+std\-::pair$<$ int, std\-::vector\*
+$<$ int $>$ $>$ \hyperlink{class_arc_ad94ee1036c1360de10038e0b2d3c8c5c}{rule} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the rule assiciated with this arc. \end{DoxyCompactList}\item 
+\hyperlink{class_arc}{\-Arc} \& \hyperlink{class_arc_acb63d3a66c7ae2a2ba72c092517c9991}{set\-Symbol} (int \hyperlink{class_arc_a33a7ffc9c79fff47658aefb4e0e42009}{symbol})
+\begin{DoxyCompactList}\small\item\em \-Set the symbol associated with this arc. \end{DoxyCompactList}\item 
+\hyperlink{class_arc}{\-Arc} \& \hyperlink{class_arc_a0e7ed37d5e5bedf244e3f15af8a53e73}{set\-Rule} (int top\-Of\-Stack, std\-::vector$<$ int $>$ new\-Top\-Of\-Stack)
+\begin{DoxyCompactList}\small\item\em \-Set the rule associated with this arc. \end{DoxyCompactList}\item 
+\hypertarget{class_arc_a75d49cfef7820d91471090d501f27909}{std\-::size\-\_\-t \& {\bfseries set\-Index} (std\-::size\-\_\-t \hyperlink{class_arc_a9ae84977f950f68095f888e6faf60282}{index})}\label{class_arc_a75d49cfef7820d91471090d501f27909}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class representing an arc in a finite automaton. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_arc_afc8733da11af7ce496f5ca9dedcd1faf}{\index{\-Arc@{\-Arc}!\-Arc@{\-Arc}}
+\index{\-Arc@{\-Arc}!Arc@{\-Arc}}
+\subsubsection[{\-Arc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Arc\-::\-Arc} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Finite\-Automaton} $\ast$}]{automaton, }
+\item[{std\-::size\-\_\-t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_afc8733da11af7ce496f5ca9dedcd1faf}
+\-Constructor.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em automaton} & \-The automaton this arc is part of. \\
+\hline
+{\em index} & \-The index for this arc. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_arc_ae61665122fe9aed275bf86df4e7191a4}{\index{\-Arc@{\-Arc}!automaton@{automaton}}
+\index{automaton@{automaton}!Arc@{\-Arc}}
+\subsubsection[{automaton}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Finite\-Automaton}$\ast$ {\bf \-Arc\-::automaton} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_ae61665122fe9aed275bf86df4e7191a4}
+
+
+\-Get the automaton this arc is part of. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The automaton this arc is part of. 
+\end{DoxyReturn}
+\hypertarget{class_arc_a9ae84977f950f68095f888e6faf60282}{\index{\-Arc@{\-Arc}!index@{index}}
+\index{index@{index}!Arc@{\-Arc}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t {\bf \-Arc\-::index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_a9ae84977f950f68095f888e6faf60282}
+
+
+\-Get the index for this automaton. 
+
+\-Indexing starts at 0.
+
+\begin{DoxyReturn}{\-Returns}
+\-The index for this automaton. 
+\end{DoxyReturn}
+\hypertarget{class_arc_ad94ee1036c1360de10038e0b2d3c8c5c}{\index{\-Arc@{\-Arc}!rule@{rule}}
+\index{rule@{rule}!Arc@{\-Arc}}
+\subsubsection[{rule}]{\setlength{\rightskip}{0pt plus 5cm}std\-::pair$<$ int, std\-::vector$<$ int $>$ $>$ {\bf \-Arc\-::rule} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_ad94ee1036c1360de10038e0b2d3c8c5c}
+
+
+\-Get the rule assiciated with this arc. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The rule assiociated with this arc. 
+\end{DoxyReturn}
+\hypertarget{class_arc_a0e7ed37d5e5bedf244e3f15af8a53e73}{\index{\-Arc@{\-Arc}!set\-Rule@{set\-Rule}}
+\index{set\-Rule@{set\-Rule}!Arc@{\-Arc}}
+\subsubsection[{set\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Arc} \& {\bf \-Arc\-::set\-Rule} (
+\begin{DoxyParamCaption}
+\item[{int}]{top\-Of\-Stack, }
+\item[{std\-::vector$<$ int $>$}]{new\-Top\-Of\-Stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_a0e7ed37d5e5bedf244e3f15af8a53e73}
+
+
+\-Set the rule associated with this arc. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-The} & new rule.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This arc. 
+\end{DoxyReturn}
+\hypertarget{class_arc_acb63d3a66c7ae2a2ba72c092517c9991}{\index{\-Arc@{\-Arc}!set\-Symbol@{set\-Symbol}}
+\index{set\-Symbol@{set\-Symbol}!Arc@{\-Arc}}
+\subsubsection[{set\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Arc} \& {\bf \-Arc\-::set\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{int}]{symbol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_acb63d3a66c7ae2a2ba72c092517c9991}
+
+
+\-Set the symbol associated with this arc. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The new symbol.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-This arc. 
+\end{DoxyReturn}
+\hypertarget{class_arc_ad7b1ba16c1449ba27e46af59b957aa2f}{\index{\-Arc@{\-Arc}!source@{source}}
+\index{source@{source}!Arc@{\-Arc}}
+\subsubsection[{source}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-State} {\bf \-Arc\-::source} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_ad7b1ba16c1449ba27e46af59b957aa2f}
+
+
+\-Get the state from which this arc originates. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The state from which this arc originates. 
+\end{DoxyReturn}
+\hypertarget{class_arc_a33a7ffc9c79fff47658aefb4e0e42009}{\index{\-Arc@{\-Arc}!symbol@{symbol}}
+\index{symbol@{symbol}!Arc@{\-Arc}}
+\subsubsection[{symbol}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Arc\-::symbol} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_a33a7ffc9c79fff47658aefb4e0e42009}
+
+
+\-Get the symbol associated with this arc. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The symbol associated with this arc. 
+\end{DoxyReturn}
+\hypertarget{class_arc_a765fcc6e938545fd1277cd766ba264b4}{\index{\-Arc@{\-Arc}!target@{target}}
+\index{target@{target}!Arc@{\-Arc}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-State} {\bf \-Arc\-::target} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_arc_a765fcc6e938545fd1277cd766ba264b4}
+
+
+\-Get the state to which this arc goes. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The state to which this arc goes. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/automata/finiteautomaton.\-h\end{DoxyCompactItemize}

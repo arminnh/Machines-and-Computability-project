@@ -1,0 +1,6 @@
+add_subdirectory(automata)
+add_subdirectory(pugixml-1.4)
+add_subdirectory(CFG)
+add_subdirectory(TM)
+add_subdirectory(MiniUI)
+add_subdirectory(gtest-1.7.0)

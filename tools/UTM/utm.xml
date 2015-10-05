@@ -1,0 +1,1779 @@
+<?xml version="1.0" ?>
+<turingmachine name="UniversalTuringMachine" nrtapes="4">
+  <blanksymbol>B</blanksymbol>
+  <anysymbol>a</anysymbol>
+  <samesymbol>r</samesymbol>
+  <states>
+    <st initial="true" name="Copy3TO4"/>
+    <st name="ReturnHead3.a"/>
+    <st name="Copy1TO4.a"/>
+    <st name="ReturnHead1.a"/>
+    <st name="ReturnHead4.a"/>
+    <st name="SetTape2"/>
+    <st name="FindTransition.a"/>
+    <st name="FindTransition.b"/>
+    <st name="(ReturnHead4.b)"/>
+    <st name="(GoNextTrans)"/>
+    <st name="ReturnHead4.d"/>
+    <st name="Copy2TO3AND4"/>
+    <st name="ReturnHead3.b"/>
+    <st name="Copy2TO1"/>
+    <st name="ReturnHead1.b"/>
+    <st name="CountDirection.a"/>
+    <st name="CountDirection.b"/>
+    <st name="CountDirection.c"/>
+    <st name="ReturnHead2.a"/>
+    <st name="ReturnHead2.b"/>
+    <st name="ReturnHead2.c"/>
+    <st name="MoveHead1Left.a"/>
+    <st name="MoveHead1Left.b"/>
+    <st name="MoveHead1Right"/>
+    <st name="Copy1TO4.b"/>
+    <st name="ReturnHead1.d"/>
+    <st name="ReturnHead4.c"/>
+    <st name="WriteBlankLeft"/>
+    <st name="ReturnHead2.d"/>
+    <st name="SetTape2Blank"/>
+    <st name="WriteBlankRight"/>
+    <st name="ReturnHead1.c"/>
+    <st halting="true" name="NoTransFound"/>
+  </states>
+  <transitions>
+    <tr>
+      <current state="Copy3TO4">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy3TO4">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy3TO4">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy3TO4">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy3TO4">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead3.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="R" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead3.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead3.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.a">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.a">
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.a">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.a">
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.a">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.a">
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.a">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.a">
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.a">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.a">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.a">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.a">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.a">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="R" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.a">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="ReturnHead4.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.a">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+      </current>
+      <next state="SetTape2">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="SetTape2">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="SetTape2">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="FindTransition.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.a">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="FindTransition.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.a">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.a">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.a">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="FindTransition.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.a">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="FindTransition.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.b">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="FindTransition.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.b">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.b">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.b">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="FindTransition.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="FindTransition.b">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+      </current>
+      <next state="ReturnHead4.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(ReturnHead4.b)">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(ReturnHead4.b)">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(ReturnHead4.b)">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(ReturnHead4.b)">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="(ReturnHead4.b)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(ReturnHead4.b)">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+      </current>
+      <next state="(GoNextTrans)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(GoNextTrans)">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="(GoNextTrans)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(GoNextTrans)">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="(GoNextTrans)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(GoNextTrans)">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="FindTransition.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(GoNextTrans)">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="(GoNextTrans)">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="(GoNextTrans)">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="NoTransFound">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.d">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="ReturnHead4.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.d">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="ReturnHead4.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.d">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="ReturnHead4.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.d">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+      </current>
+      <next state="Copy2TO3AND4">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO3AND4">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy2TO3AND4">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO3AND4">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy2TO3AND4">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="R" symbol="."/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO3AND4">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="B"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="ReturnHead3.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="R" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.b">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead3.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.b">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead3.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead3.b">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy2TO1">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO1">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy2TO1">
+        <tape direction="R" symbol="1"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO1">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy2TO1">
+        <tape direction="R" symbol="."/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO1">
+        <tape symbol="0"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.b">
+        <tape direction="L" symbol="0"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy2TO1">
+        <tape symbol="B"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.b">
+        <tape direction="L" symbol="B"/>
+        <tape direction="R" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.b">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.b">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.b">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.b">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.b">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="CountDirection.a">
+        <tape direction="R" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.b">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="CountDirection.a">
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.a">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="CountDirection.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.b">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="CountDirection.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.b">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.b">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.c">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.c">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="L" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="CountDirection.c">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="L" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.a">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.a">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.a">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.a">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.a">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Right">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="B"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.a">
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="1"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.a">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="0"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.a">
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.b">
+        <tape symbol="."/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.a">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.c">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.c">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.c">
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.c">
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.c">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.a">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.b">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.a">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.b">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.a">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankLeft">
+        <tape direction="L" symbol="0"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.b">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.b">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.b">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Left.b">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.b">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="0"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Left.b">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="B"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Right">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Right">
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Right">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="MoveHead1Right">
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Right">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="0"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="MoveHead1Right">
+        <tape symbol="B"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="SetTape2Blank">
+        <tape direction="R" symbol="0"/>
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.b">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.b">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.b">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.d">
+        <tape direction="L" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="Copy1TO4.b">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.d">
+        <tape direction="L" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.d">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.d">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.d">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.d">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.d">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="R" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.d">
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.c">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.c">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="."/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.c">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="0"/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="0"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.c">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol=";"/>
+      </current>
+      <next state="ReturnHead4.c">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol=";"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead4.c">
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+      </current>
+      <next state="FindTransition.a">
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankLeft">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankLeft">
+        <tape direction="L" symbol="1"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankLeft">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankLeft">
+        <tape direction="L" symbol="."/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankLeft">
+        <tape symbol="B"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.d">
+        <tape direction="R" symbol="B"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.d">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.d">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead2.d">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead2.d">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2Blank">
+        <tape symbol="a"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="SetTape2Blank">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2Blank">
+        <tape symbol="a"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="SetTape2Blank">
+        <tape direction="S" symbol="r"/>
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="SetTape2Blank">
+        <tape symbol="a"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankRight">
+        <tape direction="S" symbol="r"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankRight">
+        <tape symbol="B"/>
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankRight">
+        <tape direction="R" symbol="1"/>
+        <tape direction="R" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankRight">
+        <tape symbol="B"/>
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="WriteBlankRight">
+        <tape direction="R" symbol="."/>
+        <tape direction="R" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="WriteBlankRight">
+        <tape symbol="B"/>
+        <tape symbol="B"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.c">
+        <tape direction="L" symbol="B"/>
+        <tape direction="R" symbol="B"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.c">
+        <tape symbol="1"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.c">
+        <tape direction="L" symbol="1"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.c">
+        <tape symbol="."/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="ReturnHead1.c">
+        <tape direction="L" symbol="."/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+    <tr>
+      <current state="ReturnHead1.c">
+        <tape symbol="0"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+        <tape symbol="a"/>
+      </current>
+      <next state="Copy1TO4.b">
+        <tape direction="R" symbol="0"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+        <tape direction="S" symbol="r"/>
+      </next>
+    </tr>
+  </transitions>
+</turingmachine>

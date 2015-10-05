@@ -1,0 +1,16 @@
+<CFG name="test2">
+    <variables>
+        <v value="S"  />
+    </variables>
+    <terminals>
+        <t value="a"  />
+        <t value="b"  />
+    </terminals>
+    <productionrules>
+        <rule head="S" body="'a'" />
+        <rule head="S" body="'b'" />
+        <rule head="S" body="'a' S 'a'" />
+        <rule head="S" body="'b' S 'b'" />
+    </productionrules>
+    <startsymbol value="S" />
+</CFG>

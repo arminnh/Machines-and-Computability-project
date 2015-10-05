@@ -1,0 +1,100 @@
+<turingmachine name="[0n1n] TM" nrtapes="1">
+	<blanksymbol>B</blanksymbol>
+	<!--<anysymbol></anysymbol>-->
+	<!--<samesymbol></samesymbol>-->
+
+	<states>
+		<st name="q0" initial="true" />
+		<st name="q1" />
+		<st name="q2" />
+		<st name="q3" />
+		<st name="q4" halting="true" />
+	</states>
+
+	<transitions>
+		<tr>
+			<current state="q0">
+				<tape symbol="0" />
+			</current>
+			<next state="q1">
+				<tape symbol="X" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q0">
+				<tape symbol="Y" />
+			</current>
+			<next state="q3">
+				<tape symbol="Y" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="0" />
+			</current>
+			<next state="q1">
+				<tape symbol="0" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="1" />
+			</current>
+			<next state="q2">
+				<tape symbol="Y" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q1">
+				<tape symbol="Y" />
+			</current>
+			<next state="q1">
+				<tape symbol="Y" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="0" />
+			</current>
+			<next state="q2">
+				<tape symbol="0" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="X" />
+			</current>
+			<next state="q0">
+				<tape symbol="X" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q2">
+				<tape symbol="Y" />
+			</current>
+			<next state="q2">
+				<tape symbol="Y" direction="L" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="Y" />
+			</current>
+			<next state="q3">
+				<tape symbol="Y" direction="R" />
+			</next>
+		</tr>
+		<tr>
+			<current state="q3">
+				<tape symbol="B" />
+			</current>
+			<next state="q4">
+				<tape symbol="B" direction="R" />
+			</next>
+		</tr>
+	</transitions>
+	
+	<initialtapes>
+		<tape>000111</tape>
+	</initialtapes>
+</turingmachine>

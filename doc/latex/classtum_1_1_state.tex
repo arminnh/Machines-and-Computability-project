@@ -1,0 +1,174 @@
+\hypertarget{classtum_1_1_state}{\section{tum\-:\-:\-State \-Class \-Reference}
+\label{classtum_1_1_state}\index{tum\-::\-State@{tum\-::\-State}}
+}
+
+
+\hyperlink{classtum_1_1_state}{\-State} class.  
+
+
+
+
+{\ttfamily \#include $<$\-T\-M\-State.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtum_1_1_state_a07b148a853bb0d12cf17c409e4375cf2}{\-State} (\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$\-T\-M)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$ \hyperlink{classtum_1_1_state_ad3e8ce09298542d6b0b8aec6f62e1cdf}{turing\-Machine} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the turing machine this state is part of. \end{DoxyCompactList}\item 
+int \hyperlink{classtum_1_1_state_a70bbe96aa9aad33d3a173143ef9ac372}{index} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the index of this state. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classtum_1_1_state_a89f40f5593859d25d4f2a54580046060}{name} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the name of this state. \end{DoxyCompactList}\item 
+void \hyperlink{classtum_1_1_state_a4e008e0093650d4089a5b5d06edf27b0}{set\-Name} (std\-::string \hyperlink{classtum_1_1_state_a89f40f5593859d25d4f2a54580046060}{name})
+\begin{DoxyCompactList}\small\item\em \-Set the name of the state. \end{DoxyCompactList}\item 
+void \hyperlink{classtum_1_1_state_a6908b981048beec4c2973d35548393e3}{set\-Halting\-State} (bool halting)
+\begin{DoxyCompactList}\small\item\em \-Define this state as a halting state or not. \end{DoxyCompactList}\item 
+bool \hyperlink{classtum_1_1_state_a8d6883bbd189915356645e42fddd2378}{is\-Halting\-State} () const 
+\begin{DoxyCompactList}\small\item\em \-Test if this is a halting state. \end{DoxyCompactList}\item 
+\hyperlink{classtum_1_1_state}{\-State} \& \hyperlink{classtum_1_1_state_abea37f326c44b21eadc4ff6c4090c5b2}{set\-Turing\-Machine} (\hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $\ast$tm)
+\begin{DoxyCompactList}\small\item\em \-Set the turing machine this state is part of. \end{DoxyCompactList}\item 
+\hypertarget{classtum_1_1_state_a6687a56382a022034927ba43aad39524}{bool \hyperlink{classtum_1_1_state_a6687a56382a022034927ba43aad39524}{operator==} (const \hyperlink{classtum_1_1_state}{\-State} \&other) const }\label{classtum_1_1_state_a6687a56382a022034927ba43aad39524}
+
+\begin{DoxyCompactList}\small\item\em \-Equality operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classtum_1_1_state}{\-State} class. 
+
+\-A state object for a \hyperlink{classtum_1_1_turing_machine}{tum\-::\-Turing\-Machine}. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtum_1_1_state_a07b148a853bb0d12cf17c409e4375cf2}{\index{tum\-::\-State@{tum\-::\-State}!\-State@{\-State}}
+\index{\-State@{\-State}!tum::State@{tum\-::\-State}}
+\subsubsection[{\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-State\-::\-State} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Turing\-Machine} $\ast$}]{\-T\-M}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_state_a07b148a853bb0d12cf17c409e4375cf2}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-T\-M} & \-The machine this state is part of. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtum_1_1_state_a70bbe96aa9aad33d3a173143ef9ac372}{\index{tum\-::\-State@{tum\-::\-State}!index@{index}}
+\index{index@{index}!tum::State@{tum\-::\-State}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-State\-::index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_state_a70bbe96aa9aad33d3a173143ef9ac372}
+
+
+\-Get the index of this state. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The index. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_state_a8d6883bbd189915356645e42fddd2378}{\index{tum\-::\-State@{tum\-::\-State}!is\-Halting\-State@{is\-Halting\-State}}
+\index{is\-Halting\-State@{is\-Halting\-State}!tum::State@{tum\-::\-State}}
+\subsubsection[{is\-Halting\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-State\-::is\-Halting\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_state_a8d6883bbd189915356645e42fddd2378}
+
+
+\-Test if this is a halting state. 
+
+\begin{DoxyReturn}{\-Returns}
+\-True if the state is halting. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_state_a89f40f5593859d25d4f2a54580046060}{\index{tum\-::\-State@{tum\-::\-State}!name@{name}}
+\index{name@{name}!tum::State@{tum\-::\-State}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-State\-::name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_state_a89f40f5593859d25d4f2a54580046060}
+
+
+\-Get the name of this state. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The name as an \-S\-T\-L string. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_state_a6908b981048beec4c2973d35548393e3}{\index{tum\-::\-State@{tum\-::\-State}!set\-Halting\-State@{set\-Halting\-State}}
+\index{set\-Halting\-State@{set\-Halting\-State}!tum::State@{tum\-::\-State}}
+\subsubsection[{set\-Halting\-State}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-State\-::set\-Halting\-State} (
+\begin{DoxyParamCaption}
+\item[{bool}]{halting}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_state_a6908b981048beec4c2973d35548393e3}
+
+
+\-Define this state as a halting state or not. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em halting} & \-True if the state should be halting. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_state_a4e008e0093650d4089a5b5d06edf27b0}{\index{tum\-::\-State@{tum\-::\-State}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!tum::State@{tum\-::\-State}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-State\-::set\-Name} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_state_a4e008e0093650d4089a5b5d06edf27b0}
+
+
+\-Set the name of the state. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & \-The name of the state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtum_1_1_state_abea37f326c44b21eadc4ff6c4090c5b2}{\index{tum\-::\-State@{tum\-::\-State}!set\-Turing\-Machine@{set\-Turing\-Machine}}
+\index{set\-Turing\-Machine@{set\-Turing\-Machine}!tum::State@{tum\-::\-State}}
+\subsubsection[{set\-Turing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-State} \& {\bf \-State\-::set\-Turing\-Machine} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Turing\-Machine} $\ast$}]{tm}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_state_abea37f326c44b21eadc4ff6c4090c5b2}
+
+
+\-Set the turing machine this state is part of. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tm} & \-The turing machine this state is part of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The state object. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_state_ad3e8ce09298542d6b0b8aec6f62e1cdf}{\index{tum\-::\-State@{tum\-::\-State}!turing\-Machine@{turing\-Machine}}
+\index{turing\-Machine@{turing\-Machine}!tum::State@{tum\-::\-State}}
+\subsubsection[{turing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Turing\-Machine} $\ast$ {\bf \-State\-::turing\-Machine} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtum_1_1_state_ad3e8ce09298542d6b0b8aec6f62e1cdf}
+
+
+\-Get the turing machine this state is part of. 
+
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{classtum_1_1_turing_machine}{tum\-::\-Turing\-Machine} pointer. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-T\-M\-State.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-T\-M\-State.\-cpp\end{DoxyCompactItemize}

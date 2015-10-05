@@ -1,0 +1,20 @@
+<CFG name="cfgToPda1">
+    <terminals>
+        <t value="7"  />
+        <t value="8"  />
+        <t value="3"  />
+        <t value="f"  />
+        <t value="g"  />
+    </terminals>
+    <variables>
+        <v value="G"  />
+        <v value="D"  />
+        <v value="T"  />
+    </variables>
+    <startsymbol value="D"  />
+    <productionrules>
+        <rule head="G" body="G f G" />
+        <rule head="G" body="3 G" />
+        <rule head="G" body="8" />
+    </productionrules>
+</CFG>

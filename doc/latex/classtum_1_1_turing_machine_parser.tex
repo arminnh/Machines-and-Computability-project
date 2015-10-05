@@ -1,0 +1,105 @@
+\hypertarget{classtum_1_1_turing_machine_parser}{\section{tum\-:\-:\-Turing\-Machine\-Parser \-Class \-Reference}
+\label{classtum_1_1_turing_machine_parser}\index{tum\-::\-Turing\-Machine\-Parser@{tum\-::\-Turing\-Machine\-Parser}}
+}
+
+
+\-Turing \-Machine \-Parser class.  
+
+
+
+
+{\ttfamily \#include $<$\-Turing\-Machine\-Parser.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtum_1_1_turing_machine_parser_a67e81dfd10267100598e0a2e6b09b699}{\-Turing\-Machine\-Parser} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classtum_1_1_turing_machine}{\-Turing\-Machine} $>$ \hyperlink{classtum_1_1_turing_machine_parser_a24f81e21d1a867d9103bdf2ecfc647f4}{get\-Turing\-Machine} (bool the\-Josse\-Way=false)
+\begin{DoxyCompactList}\small\item\em \-Get the parsed turing machine. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr\*
+$<$ \hyperlink{classtum_1_1_turing_machine_simulator}{\-Turing\-Machine\-Simulator} $>$ \hyperlink{classtum_1_1_turing_machine_parser_adad8c53941133cc8d70a7ad8d1f7a785}{get\-Turing\-Machine\-Simulator} ()
+\begin{DoxyCompactList}\small\item\em \-Get the \-T\-M simulator. \end{DoxyCompactList}\item 
+std\-::shared\-\_\-ptr$<$ std\-::vector\*
+$<$ \hyperlink{classtum_1_1_tape}{\-Tape} $>$ $>$ \hyperlink{classtum_1_1_turing_machine_parser_abf0771a214c5a98c81d5bd5633ecc9bc}{get\-Initial\-Tapes} ()
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-Simulators tapes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Turing \-Machine \-Parser class. 
+
+\-This class parses a turing machine from a given file. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classtum_1_1_turing_machine_parser_a67e81dfd10267100598e0a2e6b09b699}{\index{tum\-::\-Turing\-Machine\-Parser@{tum\-::\-Turing\-Machine\-Parser}!\-Turing\-Machine\-Parser@{\-Turing\-Machine\-Parser}}
+\index{\-Turing\-Machine\-Parser@{\-Turing\-Machine\-Parser}!tum::TuringMachineParser@{tum\-::\-Turing\-Machine\-Parser}}
+\subsubsection[{\-Turing\-Machine\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tum\-::\-Turing\-Machine\-Parser\-::\-Turing\-Machine\-Parser} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_parser_a67e81dfd10267100598e0a2e6b09b699}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em filename} & \-The name of the file to be parsed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtum_1_1_turing_machine_parser_abf0771a214c5a98c81d5bd5633ecc9bc}{\index{tum\-::\-Turing\-Machine\-Parser@{tum\-::\-Turing\-Machine\-Parser}!get\-Initial\-Tapes@{get\-Initial\-Tapes}}
+\index{get\-Initial\-Tapes@{get\-Initial\-Tapes}!tum::TuringMachineParser@{tum\-::\-Turing\-Machine\-Parser}}
+\subsubsection[{get\-Initial\-Tapes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ std\-::vector$<$ {\bf \-Tape} $>$ $>$ {\bf tum\-::\-Turing\-Machine\-Parser\-::get\-Initial\-Tapes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_parser_abf0771a214c5a98c81d5bd5633ecc9bc}
+
+
+\-Initialize the \-Simulators tapes. 
+
+\begin{DoxyReturn}{\-Returns}
+\-S\-T\-L vector containing the tapes. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_turing_machine_parser_a24f81e21d1a867d9103bdf2ecfc647f4}{\index{tum\-::\-Turing\-Machine\-Parser@{tum\-::\-Turing\-Machine\-Parser}!get\-Turing\-Machine@{get\-Turing\-Machine}}
+\index{get\-Turing\-Machine@{get\-Turing\-Machine}!tum::TuringMachineParser@{tum\-::\-Turing\-Machine\-Parser}}
+\subsubsection[{get\-Turing\-Machine}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf \-Turing\-Machine} $>$ {\bf tum\-::\-Turing\-Machine\-Parser\-::get\-Turing\-Machine} (
+\begin{DoxyParamCaption}
+\item[{bool}]{the\-Josse\-Way = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_parser_a24f81e21d1a867d9103bdf2ecfc647f4}
+
+
+\-Get the parsed turing machine. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em the\-Josse\-Way} & \-Don't ask... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The parsed turing machine. 
+\end{DoxyReturn}
+\hypertarget{classtum_1_1_turing_machine_parser_adad8c53941133cc8d70a7ad8d1f7a785}{\index{tum\-::\-Turing\-Machine\-Parser@{tum\-::\-Turing\-Machine\-Parser}!get\-Turing\-Machine\-Simulator@{get\-Turing\-Machine\-Simulator}}
+\index{get\-Turing\-Machine\-Simulator@{get\-Turing\-Machine\-Simulator}!tum::TuringMachineParser@{tum\-::\-Turing\-Machine\-Parser}}
+\subsubsection[{get\-Turing\-Machine\-Simulator}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf \-Turing\-Machine\-Simulator} $>$ {\bf tum\-::\-Turing\-Machine\-Parser\-::get\-Turing\-Machine\-Simulator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtum_1_1_turing_machine_parser_adad8c53941133cc8d70a7ad8d1f7a785}
+
+
+\-Get the \-T\-M simulator. 
+
+\-When calling get\-Turing\-Machine\-Simulator, the initial tapes are already in the simulator. \begin{DoxyReturn}{\-Returns}
+\-The \-T\-M \-Simulator. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-Turing\-Machine\-Parser.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-T\-M/\-Turing\-Machine\-Parser.\-cpp\end{DoxyCompactItemize}

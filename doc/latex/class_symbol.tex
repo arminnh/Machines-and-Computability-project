@@ -1,0 +1,252 @@
+\hypertarget{class_symbol}{\section{\-Symbol \-Class \-Reference}
+\label{class_symbol}\index{\-Symbol@{\-Symbol}}
+}
+
+
+\hyperlink{class_symbol}{\-Symbol} class.  
+
+
+
+
+{\ttfamily \#include $<$\-Symbol.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_symbol_a9bb4fb952a2f62228b34fd5ff45ca108}{\hyperlink{class_symbol_a9bb4fb952a2f62228b34fd5ff45ca108}{\-Symbol} ()}\label{class_symbol_a9bb4fb952a2f62228b34fd5ff45ca108}
+
+\begin{DoxyCompactList}\small\item\em \-Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol_afae7aca3bcef4136af61fac19f4d3d43}{\-Symbol} (std\-::string value, int suffix, bool terminal)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol_a190320f83f8a279ab527847b20558d71}{\-Symbol} (std\-::string value, bool terminal)
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol_ac9abc4eeb75285e84b51c1b53290e0f6}{\-Symbol} (const \hyperlink{class_symbol}{\-Symbol} \&symbol)
+\begin{DoxyCompactList}\small\item\em \-Copy constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_symbol_a505360ad4bd2e0bd1e3954eca1b05723}{\hyperlink{class_symbol_a505360ad4bd2e0bd1e3954eca1b05723}{$\sim$\-Symbol} ()}\label{class_symbol_a505360ad4bd2e0bd1e3954eca1b05723}
+
+\begin{DoxyCompactList}\small\item\em \-Default destructor. \end{DoxyCompactList}\item 
+\hypertarget{class_symbol_a5e6629d94e9b4a99ed35eefb91d3b639}{\hyperlink{class_symbol}{\-Symbol} \& \hyperlink{class_symbol_a5e6629d94e9b4a99ed35eefb91d3b639}{operator=} (\hyperlink{class_symbol}{\-Symbol} symbol)}\label{class_symbol_a5e6629d94e9b4a99ed35eefb91d3b639}
+
+\begin{DoxyCompactList}\small\item\em \-Overload assignment operator. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol}{\-Symbol} \hyperlink{class_symbol_a78946d813668b5e8e9d9a237e1e5e55a}{get\-Symbol\-With\-Suffix} (int) const 
+\begin{DoxyCompactList}\small\item\em \-Get the symbol with a given suffix. \end{DoxyCompactList}\item 
+\hyperlink{class_symbol}{\-Symbol} \hyperlink{class_symbol_a311c192bc284c43f350f48fcbc526e74}{get\-Symbol\-With\-Next\-Suffix} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the symbol with the next suffix. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_symbol_ab5fa6310ed71838984240d83931fea47}{get\-Value} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the value of the symbol. \end{DoxyCompactList}\item 
+int \hyperlink{class_symbol_a75350cc87e70ee9fd8c81867b878ca59}{get\-Suffix} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the suffix of the symbol. \end{DoxyCompactList}\item 
+bool \hyperlink{class_symbol_a191d3ad4fd529cc8b26b871c6f4d90bf}{is\-Terminal} () const 
+\item 
+bool \hyperlink{class_symbol_a171fd65a9483a3c4a1fa8c05569f4665}{is\-Variable} () const 
+\begin{DoxyCompactList}\small\item\em \-Test if the symbol is variable. \end{DoxyCompactList}\item 
+\hypertarget{class_symbol_aa74bab4fabc963471bd2888e63059711}{bool {\bfseries operator==} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_aa74bab4fabc963471bd2888e63059711}
+
+\item 
+\hypertarget{class_symbol_a134af4c992025f96f104249c6001b223}{bool {\bfseries operator!=} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_a134af4c992025f96f104249c6001b223}
+
+\item 
+\hypertarget{class_symbol_aeb63961327d4ac5ea6ee4304faed321b}{bool {\bfseries operator$<$} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_aeb63961327d4ac5ea6ee4304faed321b}
+
+\item 
+\hypertarget{class_symbol_a86552a4b1e83db64ccea7b83f1706b6d}{bool {\bfseries operator$>$} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_a86552a4b1e83db64ccea7b83f1706b6d}
+
+\item 
+\hypertarget{class_symbol_a0a04c378a8dce2c488890400b645baac}{bool {\bfseries operator$<$=} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_a0a04c378a8dce2c488890400b645baac}
+
+\item 
+\hypertarget{class_symbol_a22fc7f6e522d9634e981d80871ebf2eb}{bool {\bfseries operator$>$=} (const \hyperlink{class_symbol}{\-Symbol} \&that) const }\label{class_symbol_a22fc7f6e522d9634e981d80871ebf2eb}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_symbol_a2ae42014afbbbbc73d9201ef21fc6592}{swap} (\hyperlink{class_symbol}{\-Symbol} \&first, \hyperlink{class_symbol}{\-Symbol} \&other)
+\begin{DoxyCompactList}\small\item\em \-Swap 2 symbols. \end{DoxyCompactList}\item 
+\hypertarget{class_symbol_add70cb233ce1301ba2136d2f5e204b77}{std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&, const \hyperlink{class_symbol}{\-Symbol} \&)}\label{class_symbol_add70cb233ce1301ba2136d2f5e204b77}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_symbol}{\-Symbol} class. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_symbol_afae7aca3bcef4136af61fac19f4d3d43}{\index{\-Symbol@{\-Symbol}!\-Symbol@{\-Symbol}}
+\index{\-Symbol@{\-Symbol}!Symbol@{\-Symbol}}
+\subsubsection[{\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol\-::\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{value, }
+\item[{int}]{suffix, }
+\item[{bool}]{terminal}
+\end{DoxyParamCaption}
+)}}\label{class_symbol_afae7aca3bcef4136af61fac19f4d3d43}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-The value of the symbol. \\
+\hline
+{\em suffix} & \-The suffix of the symbol. \-It is used to differ between symbols with the same value. \\
+\hline
+{\em terminal} & \-True if the symbol is a terminal. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_symbol_a190320f83f8a279ab527847b20558d71}{\index{\-Symbol@{\-Symbol}!\-Symbol@{\-Symbol}}
+\index{\-Symbol@{\-Symbol}!Symbol@{\-Symbol}}
+\subsubsection[{\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol\-::\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{value, }
+\item[{bool}]{terminal}
+\end{DoxyParamCaption}
+)}}\label{class_symbol_a190320f83f8a279ab527847b20558d71}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-The value of the symbol. \\
+\hline
+{\em terminal} & \-True if the symbol is a terminal. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_symbol_ac9abc4eeb75285e84b51c1b53290e0f6}{\index{\-Symbol@{\-Symbol}!\-Symbol@{\-Symbol}}
+\index{\-Symbol@{\-Symbol}!Symbol@{\-Symbol}}
+\subsubsection[{\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol\-::\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Symbol} \&}]{symbol}
+\end{DoxyParamCaption}
+)}}\label{class_symbol_ac9abc4eeb75285e84b51c1b53290e0f6}
+
+
+\-Copy constructor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em symbol} & \-The symbols to be copy-\/constructed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_symbol_a75350cc87e70ee9fd8c81867b878ca59}{\index{\-Symbol@{\-Symbol}!get\-Suffix@{get\-Suffix}}
+\index{get\-Suffix@{get\-Suffix}!Symbol@{\-Symbol}}
+\subsubsection[{get\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Symbol\-::get\-Suffix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_a75350cc87e70ee9fd8c81867b878ca59}
+
+
+\-Get the suffix of the symbol. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The suffix of the symbol. 
+\end{DoxyReturn}
+\hypertarget{class_symbol_a311c192bc284c43f350f48fcbc526e74}{\index{\-Symbol@{\-Symbol}!get\-Symbol\-With\-Next\-Suffix@{get\-Symbol\-With\-Next\-Suffix}}
+\index{get\-Symbol\-With\-Next\-Suffix@{get\-Symbol\-With\-Next\-Suffix}!Symbol@{\-Symbol}}
+\subsubsection[{get\-Symbol\-With\-Next\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol} {\bf \-Symbol\-::get\-Symbol\-With\-Next\-Suffix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_a311c192bc284c43f350f48fcbc526e74}
+
+
+\-Get the symbol with the next suffix. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The symbol with the next suffix. 
+\end{DoxyReturn}
+\hypertarget{class_symbol_a78946d813668b5e8e9d9a237e1e5e55a}{\index{\-Symbol@{\-Symbol}!get\-Symbol\-With\-Suffix@{get\-Symbol\-With\-Suffix}}
+\index{get\-Symbol\-With\-Suffix@{get\-Symbol\-With\-Suffix}!Symbol@{\-Symbol}}
+\subsubsection[{get\-Symbol\-With\-Suffix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol} {\bf \-Symbol\-::get\-Symbol\-With\-Suffix} (
+\begin{DoxyParamCaption}
+\item[{int}]{suffix}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_a78946d813668b5e8e9d9a237e1e5e55a}
+
+
+\-Get the symbol with a given suffix. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em suffix} & \-The suffix of the symbol that will be created.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{class_symbol}{\-Symbol} with the same value and given suffix. 
+\end{DoxyReturn}
+\hypertarget{class_symbol_ab5fa6310ed71838984240d83931fea47}{\index{\-Symbol@{\-Symbol}!get\-Value@{get\-Value}}
+\index{get\-Value@{get\-Value}!Symbol@{\-Symbol}}
+\subsubsection[{get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-Symbol\-::get\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_ab5fa6310ed71838984240d83931fea47}
+
+
+\-Get the value of the symbol. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The value of the symbol. 
+\end{DoxyReturn}
+\hypertarget{class_symbol_a191d3ad4fd529cc8b26b871c6f4d90bf}{\index{\-Symbol@{\-Symbol}!is\-Terminal@{is\-Terminal}}
+\index{is\-Terminal@{is\-Terminal}!Symbol@{\-Symbol}}
+\subsubsection[{is\-Terminal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Symbol\-::is\-Terminal} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_a191d3ad4fd529cc8b26b871c6f4d90bf}
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Test} & if the symbol is a terminal.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol is a terminal. 
+\end{DoxyReturn}
+\hypertarget{class_symbol_a171fd65a9483a3c4a1fa8c05569f4665}{\index{\-Symbol@{\-Symbol}!is\-Variable@{is\-Variable}}
+\index{is\-Variable@{is\-Variable}!Symbol@{\-Symbol}}
+\subsubsection[{is\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Symbol\-::is\-Variable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_symbol_a171fd65a9483a3c4a1fa8c05569f4665}
+
+
+\-Test if the symbol is variable. 
+
+\begin{DoxyReturn}{\-Returns}
+\-True if the symbol is a variable. 
+\end{DoxyReturn}
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{class_symbol_a2ae42014afbbbbc73d9201ef21fc6592}{\index{\-Symbol@{\-Symbol}!swap@{swap}}
+\index{swap@{swap}!Symbol@{\-Symbol}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf swap} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Symbol} \&}]{first, }
+\item[{{\bf \-Symbol} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{class_symbol_a2ae42014afbbbbc73d9201ef21fc6592}
+
+
+\-Swap 2 symbols. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em first} & \hyperlink{class_symbol}{\-Symbol} 1. \\
+\hline
+{\em second} & \hyperlink{class_symbol}{\-Symbol} 2. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-C\-F\-G/\-Symbol.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/\-C\-F\-G/\-Symbol.\-cpp\end{DoxyCompactItemize}

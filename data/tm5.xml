@@ -1,0 +1,92 @@
+<turingmachine name="Binary Counter" nrtapes="1">
+    <blanksymbol>B</blanksymbol>
+
+    <states>
+        <st name="0" initial="true"  />
+        <st name="1"  />
+        <st name="2"  />
+        <st name="f" halting="true" />
+    </states>
+
+    <transitions>
+        <tr>
+            <current state="0">
+                <tape symbol="B"  />
+            </current>
+            <next state="1">
+                <tape symbol="B" direction="L"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="0">
+                <tape symbol="0"  />
+            </current>
+            <next state="0">
+                <tape symbol="0" direction="R"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="0">
+                <tape symbol="1"  />
+            </current>
+            <next state="0">
+                <tape symbol="1" direction="R"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="1">
+                <tape symbol="B"  />
+            </current>
+            <next state="2">
+                <tape symbol="1" direction="R"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="1">
+                <tape symbol="0"  />
+            </current>
+            <next state="2">
+                <tape symbol="1" direction="L"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="1">
+                <tape symbol="1"  />
+            </current>
+            <next state="1">
+                <tape symbol="0" direction="L"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="2">
+                <tape symbol="B"  />
+            </current>
+            <next state="f">
+                <tape symbol="B" direction="L"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="2">
+                <tape symbol="0"  />
+            </current>
+            <next state="2">
+                <tape symbol="0" direction="R"/>
+            </next>
+        </tr>
+        <tr>
+            <current state="2">
+                <tape symbol="1"  />
+            </current>
+            <next state="2">
+                <tape symbol="1" direction="R"/>
+            </next>
+        </tr>
+    </transitions>
+
+    <initialtapes>
+        <tape>01011</tape>
+    </initialtapes>
+</turingmachine>
+
+
+

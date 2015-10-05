@@ -1,0 +1,333 @@
+\hypertarget{class_finite_automaton}{\section{\-Finite\-Automaton \-Class \-Reference}
+\label{class_finite_automaton}\index{\-Finite\-Automaton@{\-Finite\-Automaton}}
+}
+
+
+\-Class representing a finite state automaton.  
+
+
+
+
+{\ttfamily \#include $<$finiteautomaton.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_finite_automaton_a23cea3adb981335a3c1da842f27ecdac}{\-Finite\-Automaton} ()
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_a650edca52e427bf41f0bcce8c41190b9}{remove\-State} (const \hyperlink{class_state}{\-State} \&state)
+\begin{DoxyCompactList}\small\item\em \-Remove a state from this automaton. \end{DoxyCompactList}\item 
+\hyperlink{class_state}{\-State} \hyperlink{class_finite_automaton_ad2202baebb0606c8ce719cf915fe0abe}{start} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the start state for this automaton. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_a6fa420ce42852c1c16b4ff1d7e1d4181}{set\-Start} (const \hyperlink{class_state}{\-State} \&state)
+\begin{DoxyCompactList}\small\item\em \-Set the start state for this automaton. \end{DoxyCompactList}\item 
+const std\-::set$<$ \hyperlink{class_state}{\-State} $>$ \& \hyperlink{class_finite_automaton_a9b459162b1b4276fa2bd4d0e9f55f926}{accepting} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the set of accepting states. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_aabadad17e0ddb008417b27c67e778c81}{set\-Accepting} (const \hyperlink{class_state}{\-State} \&state, bool accept=true)
+\begin{DoxyCompactList}\small\item\em \-Add or remove a state from the set of accepting states. \end{DoxyCompactList}\item 
+std\-::set$<$ int $>$ \hyperlink{class_finite_automaton_a127e630cdbb8efaf9dae4b004acb8747}{alphabet} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the alphabet for this automaton. \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{class_state}{\-State} $>$ \hyperlink{class_finite_automaton_ac153db819f69f154d26e7c15ca10a907}{eclose} (const \hyperlink{class_state}{\-State} \&state) const 
+\begin{DoxyCompactList}\small\item\em \-Get the \-E\-C\-L\-O\-S\-E set for the specified state. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_af9af3606c2389b779c99dfcae78374e9}{eclose} (std\-::set$<$ \hyperlink{class_state}{\-State} $>$ \&states) const 
+\begin{DoxyCompactList}\small\item\em \-Get the \-E\-C\-L\-O\-S\-E set for the specified set of states. \end{DoxyCompactList}\item 
+bool \hyperlink{class_finite_automaton_a2cf753f71b6dcb52509e6324fdfae012}{equivalent} (const \hyperlink{class_state}{\-State} \&state1, const \hyperlink{class_state}{\-State} \&state2) const 
+\begin{DoxyCompactList}\small\item\em \-Check if two states are equivalent. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_a6876fbed7fd822d0cad76e352c368eff}{final\-\_\-state} ()
+\begin{DoxyCompactList}\small\item\em \-Convert the finite automaton to a \-P\-D\-A using acceptance by final state. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_a4739cb28dc9241d67fdbd20eff7d8817}{empty\-\_\-stack} ()
+\begin{DoxyCompactList}\small\item\em \-Convert the finite automaton to a \-P\-D\-A using acceptance by empty stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf \-Arcs}\par
+\begin{DoxyCompactItemize}
+\item 
+std\-::size\-\_\-t \hyperlink{class_finite_automaton_acfb7910d6e4b504f09849704d3ef07aa}{num\-Arcs} () const 
+\begin{DoxyCompactList}\small\item\em \-Get the number of arcs in this automaton. \end{DoxyCompactList}\item 
+\hyperlink{class_arc}{\-Arc} \hyperlink{class_finite_automaton_a992512615cab32d1eadab430f38548de}{arc} (std\-::size\-\_\-t index) const 
+\begin{DoxyCompactList}\small\item\em \-Get the arc with the specified {\ttfamily index}. \end{DoxyCompactList}\item 
+\hyperlink{class_arc}{\-Arc} \hyperlink{class_finite_automaton_a2001b94911ee4e35c35c408c2fb2c089}{add\-Arc} (const \hyperlink{class_state}{\-State} \&source, const \hyperlink{class_state}{\-State} \&target)
+\begin{DoxyCompactList}\small\item\em \-Add an arc to this automaton. \end{DoxyCompactList}\item 
+void \hyperlink{class_finite_automaton_ad445bfea4e6183be2ee6f42ff60127d0}{remove\-Arc} (const \hyperlink{class_arc}{\-Arc} \&\hyperlink{class_finite_automaton_a992512615cab32d1eadab430f38548de}{arc})
+\begin{DoxyCompactList}\small\item\em \-Remove an arc from this automaton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_finite_automaton_a7edbf9e31116a21e4e18cd2dd004ae63}{class {\bfseries \-State}}\label{class_finite_automaton_a7edbf9e31116a21e4e18cd2dd004ae63}
+
+\item 
+\hypertarget{class_finite_automaton_a462202165d679218de86391de27ab20c}{class {\bfseries \-Arc}}\label{class_finite_automaton_a462202165d679218de86391de27ab20c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class representing a finite state automaton. 
+
+\-This class can be used to represent \-D\-F\-A, \-N\-F\-A and epsilon-\/\-N\-F\-A automata. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_finite_automaton_a23cea3adb981335a3c1da842f27ecdac}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!\-Finite\-Automaton@{\-Finite\-Automaton}}
+\index{\-Finite\-Automaton@{\-Finite\-Automaton}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{\-Finite\-Automaton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Finite\-Automaton\-::\-Finite\-Automaton} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_a23cea3adb981335a3c1da842f27ecdac}
+
+
+\-Constructor. 
+
+\-Creates an empty finite state automaton. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_finite_automaton_a9b459162b1b4276fa2bd4d0e9f55f926}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!accepting@{accepting}}
+\index{accepting@{accepting}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{accepting}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::set$<${\bf \-State}$>$\& {\bf \-Finite\-Automaton\-::accepting} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_a9b459162b1b4276fa2bd4d0e9f55f926}
+
+
+\-Get the set of accepting states. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The set of accepting states. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_a2001b94911ee4e35c35c408c2fb2c089}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!add\-Arc@{add\-Arc}}
+\index{add\-Arc@{add\-Arc}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{add\-Arc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Arc} {\bf \-Finite\-Automaton\-::add\-Arc} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{source, }
+\item[{const {\bf \-State} \&}]{target}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_a2001b94911ee4e35c35c408c2fb2c089}
+
+
+\-Add an arc to this automaton. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em source} & \-The source state from which the arc leaves. \\
+\hline
+{\em target} & \-The target state where the arc arrives.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The newly added arc. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_a127e630cdbb8efaf9dae4b004acb8747}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{alphabet}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ int $>$ {\bf \-Finite\-Automaton\-::alphabet} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_finite_automaton_a127e630cdbb8efaf9dae4b004acb8747}
+
+
+\-Get the alphabet for this automaton. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The alphabet. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_a992512615cab32d1eadab430f38548de}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!arc@{arc}}
+\index{arc@{arc}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{arc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Arc} {\bf \-Finite\-Automaton\-::arc} (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_a992512615cab32d1eadab430f38548de}
+
+
+\-Get the arc with the specified {\ttfamily index}. 
+
+\-Indexing starts at 0.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em index} & \-The index of the arc to get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The arc with the specified {\ttfamily index}. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_ac153db819f69f154d26e7c15ca10a907}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!eclose@{eclose}}
+\index{eclose@{eclose}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{eclose}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ {\bf \-State} $>$ {\bf \-Finite\-Automaton\-::eclose} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{state}
+\end{DoxyParamCaption}
+) const}}\label{class_finite_automaton_ac153db819f69f154d26e7c15ca10a907}
+
+
+\-Get the \-E\-C\-L\-O\-S\-E set for the specified state. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state} & \-The state for which to get the \-E\-C\-L\-O\-S\-E set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The \-E\-C\-L\-O\-S\-E set for the specified state. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_af9af3606c2389b779c99dfcae78374e9}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!eclose@{eclose}}
+\index{eclose@{eclose}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{eclose}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::eclose} (
+\begin{DoxyParamCaption}
+\item[{std\-::set$<$ {\bf \-State} $>$ \&}]{states}
+\end{DoxyParamCaption}
+) const}}\label{class_finite_automaton_af9af3606c2389b779c99dfcae78374e9}
+
+
+\-Get the \-E\-C\-L\-O\-S\-E set for the specified set of states. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em states} & \-The states for which to get the \-E\-C\-L\-O\-S\-E set. \-This parameter will also be used as output by adding the \-E\-C\-L\-O\-S\-E states to this set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_finite_automaton_a4739cb28dc9241d67fdbd20eff7d8817}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!empty\-\_\-stack@{empty\-\_\-stack}}
+\index{empty\-\_\-stack@{empty\-\_\-stack}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{empty\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::empty\-\_\-stack} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_a4739cb28dc9241d67fdbd20eff7d8817}
+
+
+\-Convert the finite automaton to a \-P\-D\-A using acceptance by empty stack. 
+
+\-W\-O\-R\-K\-F\-L\-O\-W\-: \-Add new final state \-Add new start state \-Add new first item on stack \-Enter old \-P\-D\-A \-If reaching an accepting state \-Clear the stack\hypertarget{class_finite_automaton_a2cf753f71b6dcb52509e6324fdfae012}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!equivalent@{equivalent}}
+\index{equivalent@{equivalent}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{equivalent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Finite\-Automaton\-::equivalent} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{state1, }
+\item[{const {\bf \-State} \&}]{state2}
+\end{DoxyParamCaption}
+) const}}\label{class_finite_automaton_a2cf753f71b6dcb52509e6324fdfae012}
+
+
+\-Check if two states are equivalent. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state1} & \-The first state. \\
+\hline
+{\em state2} & \-The second state.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-True is {\ttfamily state1} and {\ttfamily state2} are equivalent. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_a6876fbed7fd822d0cad76e352c368eff}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!final\-\_\-state@{final\-\_\-state}}
+\index{final\-\_\-state@{final\-\_\-state}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{final\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::final\-\_\-state} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_a6876fbed7fd822d0cad76e352c368eff}
+
+
+\-Convert the finite automaton to a \-P\-D\-A using acceptance by final state. 
+
+\-W\-O\-R\-K\-F\-L\-O\-W\-: \-D\-O\-N\-E -\/-\/ \-Add new final state \-D\-O\-N\-E -\/-\/ \-Add new start state \-D\-O\-N\-E -\/-\/ \-Add new first item on stack \-D\-O\-N\-E -\/-\/ enter old \-P\-D\-A \-D\-O\-N\-E -\/-\/ \-If top of stack == new first item on stack \-D\-O\-N\-E -\/-\/ \-Go to \-Accept state\hypertarget{class_finite_automaton_acfb7910d6e4b504f09849704d3ef07aa}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!num\-Arcs@{num\-Arcs}}
+\index{num\-Arcs@{num\-Arcs}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{num\-Arcs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t {\bf \-Finite\-Automaton\-::num\-Arcs} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_acfb7910d6e4b504f09849704d3ef07aa}
+
+
+\-Get the number of arcs in this automaton. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The number of arcs in this automaton. 
+\end{DoxyReturn}
+\hypertarget{class_finite_automaton_ad445bfea4e6183be2ee6f42ff60127d0}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!remove\-Arc@{remove\-Arc}}
+\index{remove\-Arc@{remove\-Arc}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{remove\-Arc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::remove\-Arc} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Arc} \&}]{arc}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_ad445bfea4e6183be2ee6f42ff60127d0}
+
+
+\-Remove an arc from this automaton. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em arc} & \-The arc to remove. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_finite_automaton_a650edca52e427bf41f0bcce8c41190b9}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!remove\-State@{remove\-State}}
+\index{remove\-State@{remove\-State}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{remove\-State}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::remove\-State} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{state}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_a650edca52e427bf41f0bcce8c41190b9}
+
+
+\-Remove a state from this automaton. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state} & \-The state to remove. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_finite_automaton_aabadad17e0ddb008417b27c67e778c81}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!set\-Accepting@{set\-Accepting}}
+\index{set\-Accepting@{set\-Accepting}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{set\-Accepting}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::set\-Accepting} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{state, }
+\item[{bool}]{accept = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_finite_automaton_aabadad17e0ddb008417b27c67e778c81}
+
+
+\-Add or remove a state from the set of accepting states. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state} & \-The state to add or remove from the set of accepting states. \\
+\hline
+{\em accept} & \-If true, the state will be added to the set of accepting states. \-If false, the state will be removed from the set of accepting states. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_finite_automaton_a6fa420ce42852c1c16b4ff1d7e1d4181}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!set\-Start@{set\-Start}}
+\index{set\-Start@{set\-Start}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{set\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Finite\-Automaton\-::set\-Start} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-State} \&}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_a6fa420ce42852c1c16b4ff1d7e1d4181}
+
+
+\-Set the start state for this automaton. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state} & \-The new start state. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_finite_automaton_ad2202baebb0606c8ce719cf915fe0abe}{\index{\-Finite\-Automaton@{\-Finite\-Automaton}!start@{start}}
+\index{start@{start}!FiniteAutomaton@{\-Finite\-Automaton}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-State} {\bf \-Finite\-Automaton\-::start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_finite_automaton_ad2202baebb0606c8ce719cf915fe0abe}
+
+
+\-Get the start state for this automaton. 
+
+\begin{DoxyReturn}{\-Returns}
+\-The start state for this automaton. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/automata/finiteautomaton.\-h\item 
+/home/n/\-Dropbox/\-Jaar 3/\-Semester 1/\-Machines en Berekenbaarheid/\-Project/\-M\-B/src/automata/finiteautomaton.\-cpp\end{DoxyCompactItemize}
