@@ -18,6 +18,7 @@ The tools were written in C++ as part of a Machines and Computability course at 
  * Output simulation to file
 * Universal Turing Machines
  * Simulate (any) other turing machines
+
 All input files are .xml files.
 
 ### Install
@@ -26,7 +27,7 @@ in build/
 cmake ..
 make all
 ```
-Tools will be installed in the build folder.
+The tools will be installed in the build folder.
 
 ### Usage
 
@@ -35,18 +36,15 @@ Start the main program by running
 ./Tools_UI.bin
 ~~~
 When running this binary, a user interface will begin for full functionality. Please note that you will be required to enter '.xml' filenames, so be sure to remember their names and locations.
+
 Sample .xml files can be found in build/data/
 
-Binaries are also available with specific functionality:
+##### Other binaries with specific functionality:
 run tests with google framework
 ~~~sh
 ./runUnitTests
 ~~~
-quick parse + show a CFG
-~~~sh
-./cfgParser.bin [cfg.xml]
-~~~
-convert a CFG to PDA (and generating a dot file for visual representation with graphviz)
+convert a CFG to PDA (generates a dot file for visual representation with graphviz)
 ~~~sh
 ./cfgToPda.bin [cfg.xml] [pda.dot]
 ~~~
@@ -58,17 +56,21 @@ test cyk membership
 ~~~sh
 ./cyk.bin [cfg.xml] "string"
 ~~~
+run a simple turing machine
+~~~sh
+./tmSimulator.bin [turingmachine.xml]
+~~~
 convert an arbitrary turing machine for use in the UTM
 ~~~sh
 ./tmConverterTest.bin [turingmachine.xml]
 ~~~
-For running a simple turing machine
-~~~sh
-./tmSimulator.bin [turingmachine.xml]
-~~~
 For running the universal turing machine and pass an arbitrary turingmachine as parameter
 ~~~sh
 ./utmSimulator.bin [UTM.xml] [turingmachine.xml]
+~~~
+quick parse + show a CFG
+~~~sh
+./cfgParser.bin [cfg.xml]
 ~~~
 
 ### Creating documentation
@@ -80,8 +82,12 @@ doxygen
 ~~~
 open "html/index.html"
 
-###Libraries used
+### Libraries used
 * gtest-1.7.0
 * pugixml-1.4
 
-More documentation can be found in information/
+Presentations about the project can be found in information/
+
+### How our Universal Turing Machine works
+This is explained in detail in information/README_UTM.txt (in Dutch).
+A brief explanation + example of the UTM's algorithm (in English) is available in information/finalPresentation.pdf
