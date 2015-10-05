@@ -15,6 +15,12 @@ include_directories(${CMAKE_BINARY_DIR}/include)
 add_subdirectory(src)
 add_subdirectory(data)
 
+# add_executable(pda.bin tools/old/mainPDA.cpp)
+# target_link_libraries(pda.bin cfglib)
+
+#add_executable(cfg.bin tools/mainCFG.cpp)
+#target_link_libraries(cfg.bin cfglib pdalib)
+
 add_executable(cfgParser.bin tools/mainCFGParser.cpp)
 target_link_libraries(cfgParser.bin cfglib pdalib)
 
@@ -49,5 +55,3 @@ add_executable( runUnitTests
     )
 target_link_libraries(runUnitTests gtest gtest_main cfglib pdalib tmlib)
 add_test( runUnitTests runUnitTests "${CMAKE_SOURCE_DIR}/data/")
-
-INSTALL(TARGETS Space_Invaders DESTINATION ${PROJECT_SOURCE_DIR}/bin)
