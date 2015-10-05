@@ -80,7 +80,7 @@ in doc/
 ~~~sh
 doxygen
 ~~~
-open "html/index.html"
+open html/index.html
 
 ### Libraries used
 * gtest-1.7.0
@@ -91,3 +91,9 @@ Presentations about the project can be found in information/
 ### How our Universal Turing Machine works
 This is explained in detail in information/README_UTM.txt (in Dutch).
 A brief explanation + example of the UTM's algorithm (in English) is available in information/finalPresentation.pdf
+
+### Authors
+[Armin Halilovic](https://github.com/arminnh)  
+[Josse Coen] (https://github.com/jsscn)  
+[Bruno de Deken] (https://github.com/brunodd)  
+[Fouad Kichauat] (https://github.com/Fouad-Kichauat)  
