@@ -1,7 +1,7 @@
 # Machines and Computability project
 ## Teaching Tools
 A program to aid students in the understanding of several concepts seen in machines and computability, mote specifically Context Free Grammars, Turing Machines and Universal Turing Machines.  
-The tools were written in C++ as part of a Machines and Computability course at the [University of Antwerp](https://www.uantwerpen.be/popup/opleidingsonderdeel.aspx?catalognr=1001WETCGR&taal=en&aj=2014).<br>
+The tools were written in C++ as part of a [Machines and Computability course](https://www.uantwerpen.be/popup/opleidingsonderdeel.aspx?catalognr=1001WETCGR&taal=en&aj=2014) at the University of Antwerp.  
 
 ![alt text](doc/2015-10-05 20_27_12-eOS Freya 64 - VMware Player (Non-commercial use only).png)
 
