@@ -3,7 +3,7 @@ A program written in C++ as part of a [Machines and Computability course](https:
 ## Teaching Tools
 The program can aid students in the understanding of several concepts seen in machines and computability, more specifically Context Free Grammars, Turing Machines and Universal Turing Machines.    
 
-![alt text](doc/2015-10-05 20_27_12-eOS Freya 64 - VMware Player (Non-commercial use only).png)
+![Images of the program](program.png)
 
 ### Features
 * Context Free Grammars
